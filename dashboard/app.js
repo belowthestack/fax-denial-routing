@@ -1,5 +1,5 @@
 /* Static dashboard. It decides nothing: every row it shows, and every change a button makes,
-   comes from data/demo.json, which scripts/export_demo.py produced by running the Python pipeline. */
+   comes from data/demo.json, which scripts/export_demo.py produced by playing the Python pipeline over the fixtures. */
 "use strict";
 
 const LABELS = {
@@ -72,7 +72,7 @@ function viewIncoming() {
           <td class="dim">${esc(DEMO.meta.alerts[0] || "Alert sent")}</td>
           <td class="right"><button class="btn sm" data-retry="${d.dl_id}">Retry after outage</button></td></tr>`).join("")}
         </tbody></table>
-        <div class="panel-b dim">The model API was simulated as down when this fax arrived. The fax is kept, an alert fired, and nothing was guessed. Retrying re-runs extraction on the stored copy.</div></div>`
+        <div class="panel-b dim">The model API was simulated as down when this fax arrived. The fax is kept, an alert fired, and nothing was guessed. Retrying repeats extraction on the stored copy.</div></div>`
     : "";
   return `
   <div class="head"><div class="eyebrow">Fax intake</div><h1>Incoming faxes</h1>
@@ -103,7 +103,7 @@ function viewIncoming() {
 function viewReview() {
   const list = docs().filter((d) => d.needs_review);
   return `<div class="head"><div class="eyebrow">Human in the loop</div><h1>Review queue</h1>
-  <p class="lede">Anything the checks cannot vouch for lands here with the reasons attached. A person reads the original fax, confirms the values, and the same rules run again. Nothing is drafted for sending until that happens.</p></div>
+  <p class="lede">Anything the checks cannot vouch for lands here with the reasons attached. A person reads the original fax, confirms the values, and the same rules apply again. Nothing is drafted for sending until that happens.</p></div>
   ${list.length ? `<div class="panel"><table><thead><tr><th>Fax</th><th>Would route to</th><th>Why it is here</th><th></th></tr></thead><tbody>
   ${list.map((d) => `<tr class="click" data-doc="${d.doc_id}"><td class="mono">${esc(faxOf(d).fixture)}.pdf</td>
     <td>${d.tentative_queue ? `<span class="chip">${q(d.tentative_queue)}</span>` : '<span class="dim">undecided</span>'}</td>
@@ -192,7 +192,7 @@ function reviewBox(d, fx) {
     ${names.map((n) => `<label for="rv-${n}">${esc(n)}</label><input id="rv-${n}" data-field="${n}" autocomplete="off" spellcheck="false" placeholder="Type exactly what the page says">`).join("")}
     <p class="note">In this static demo, only the value printed on the page is accepted (a reviewer would not type a wrong one on purpose). The API accepts any value that passes the shared validation.</p>
     <div class="err" id="rv-err"></div>
-    <div style="margin-top:12px"><button class="btn" id="rv-apply" data-review="${d.doc_id}">Confirm and re-run the rules</button></div></div></div>`;
+    <div style="margin-top:12px"><button class="btn" id="rv-apply" data-review="${d.doc_id}">Confirm and apply the rules again</button></div></div></div>`;
 }
 function actionPanel(acts) {
   return `<div class="panel"><div class="panel-h"><div><div class="eyebrow">Proposed outbound action</div><h2>A person approves before anything is sent</h2></div></div><div class="panel-b">
@@ -255,7 +255,7 @@ document.addEventListener("click", (e) => {
     if (bad.length) { $("#rv-err").textContent = `Check the page again: ${bad.join(", ")} does not match what is printed.`; return; }
     applyPatch(rec.patch);
     const d = S.documents[id];
-    toast(`Rules re-ran on the confirmed values: ${LABELS.doc[d.doc_type]}, routed to ${q(d.queue)}.`);
+    toast(`Rules applied again to the confirmed values: ${LABELS.doc[d.doc_type]}, routed to ${q(d.queue)}.`);
     return void (location.hash = `#/doc/${id}`, render());
   }
   if (t.dataset.act) {
