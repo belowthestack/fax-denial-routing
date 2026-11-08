@@ -1,0 +1,13 @@
+{
+  "_note": "Invented display names for the demo board. They are NOT printed on the sample faxes (the PDFs and their recorded model replies are fixed), so the side panel says the name was added for the demo.",
+  "01_approved_aba_assessment": "Olivia H.",
+  "02_approved_scanned_blurry": "Marcus B.",
+  "03_denial_medical_necessity": "Ethan C.",
+  "04_denial_missing_documentation": "Mia A.",
+  "05_denial_eligibility": "Jayden P.",
+  "06_denial_expired_auth": "Chloe B.",
+  "07_denial_coding_scanned": "Lucas O.",
+  "08_partial_units_medical_necessity": "Harper Q.",
+  "09_partial_dates_missing_documentation": "Aiden F.",
+  "10_not_a_payer_vendor_flyer": null
+}

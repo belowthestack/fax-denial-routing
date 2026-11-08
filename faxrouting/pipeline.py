@@ -18,16 +18,17 @@ from typing import Callable
 
 from . import audit
 from .extractors import Extractor, NeedsVision, content_hash
+from . import messages
 from .rules import Decision, decide
-from .schema import DocType, Extraction, FieldValue, Queue
+from .schema import DenialReason, DocType, Extraction, FieldValue, Queue
 from .store import Store, now_iso
 
-ACTION_TEMPLATES: dict[Queue, tuple[str, str]] = {
-    Queue.MISSING_DOCUMENTATION: ("send_records", "Request the missing documentation from the clinical team, then send it to {payer} for auth/ref {ref}."),
-    Queue.MEDICAL_NECESSITY: ("appeal_or_peer_review", "Prepare an appeal or peer-to-peer request to {payer} for auth/ref {ref}. A clinician reviews before anything is sent."),
-    Queue.ELIGIBILITY: ("verify_eligibility", "Verify member eligibility with {payer} for member {member} and update the registration record."),
-    Queue.EXPIRED_AUTH: ("request_reauthorization", "Start a new authorization request with {payer}; the prior authorization (ref {ref}) is expired."),
-    Queue.CODING: ("correct_and_resubmit", "Review the service code and modifier on the request to {payer} (ref {ref}); correct and resubmit."),
+ACTION_KIND: dict[Queue, str] = {
+    Queue.MISSING_DOCUMENTATION: "send_records",
+    Queue.MEDICAL_NECESSITY: "appeal_or_peer_review",
+    Queue.ELIGIBILITY: "verify_eligibility",
+    Queue.EXPIRED_AUTH: "request_reauthorization",
+    Queue.CODING: "correct_and_resubmit",
 }
 
 
@@ -133,18 +134,16 @@ class Pipeline:
             if retry_of:
                 detail["retry_of"] = retry_of
             audit.log(self.store, conn, "document_routed", fax_id=fax_id, doc_id=doc_id, **detail)
-            self._propose_action(conn, doc_id, ex, d.tentative_queue, d.needs_review)
+            self._propose_action(conn, doc_id, ex, d)
         return doc_id
 
-    def _propose_action(self, conn: sqlite3.Connection, doc_id: str, ex: Extraction, queue: Queue | None, needs_review: bool) -> None:
-        if queue not in ACTION_TEMPLATES or needs_review:
+    def _propose_action(self, conn: sqlite3.Connection, doc_id: str, ex: Extraction, d: Decision) -> None:
+        queue = d.tentative_queue
+        if queue not in ACTION_KIND or d.needs_review:
             return  # a person must confirm the extraction first; actions are drafted after resolve_review
-        kind, template = ACTION_TEMPLATES[queue]
-        draft = template.format(
-            payer=ex.get("payer_name") or "the payer",
-            ref=ex.get("auth_number") or ex.get("member_id") or "unknown",
-            member=ex.get("member_id") or "unknown",
-        )
+        draft = messages.next_step(d.doc_type, d.denial_reason, {k: v.value for k, v in ex.fields.items()})
+        assert draft, "every denial queue has a next-step template"
+        kind = ACTION_KIND[queue]
         action_id = f"act_{uuid.uuid4().hex[:10]}"
         conn.execute(
             "INSERT INTO actions (action_id, doc_id, kind, draft, status, created_at) VALUES (?,?,?,?,?,?)",
@@ -205,7 +204,7 @@ class Pipeline:
                 fields_changed=sorted(changed), queue=d.queue.value, doc_type=d.doc_type.value,
                 rule_ids=sorted({h.rule_id for h in d.hits}), needs_review=d.needs_review,
             )
-            self._propose_action(conn, doc_id, ex, d.tentative_queue, d.needs_review)
+            self._propose_action(conn, doc_id, ex, d)
         return IngestResult("processed", row["fax_id"], doc_id, d.queue.value)
 
     # ------------------------------------------------------- approvals

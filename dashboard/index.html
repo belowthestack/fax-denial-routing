@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#fafaf9">
-<title>Fax Denial Routing</title>
-<meta name="description" content="Incoming fax intake and denial routing on synthetic payer letters. Rules cite themselves; a person approves every outbound action.">
+<title>Insurance faxes board</title>
+<meta name="description" content="A demo board for a therapy clinic's insurance faxes: what came in, what needs you, and the next step for each. Made-up patients and insurers.">
 <link rel="icon" href="assets/arfa-mark-navy.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,30 +14,19 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="app">
-  <aside class="side">
-    <div class="brand">
-      <div class="mark"><img src="assets/arfa-mark-navy.png" alt="ARFA"></div>
-      <div>
-        <div class="brand-title">ARFA</div>
-        <div class="brand-sub">Fax denial routing</div>
-      </div>
-    </div>
-    <nav id="nav" aria-label="Sections"></nav>
-    <div class="side-foot">
-      <div class="eyebrow">Synthetic data</div>
-      <p>Every payer, member and number here is invented. No real patient or client data.</p>
-      <button class="btn ghost" id="reset">Reset demo</button>
-    </div>
-  </aside>
-  <main class="main">
-    <div class="banner" role="note">
-      <span class="tag">Synthetic data</span>
-      <span>Decisions below were computed by the Python pipeline on 10 invented payer letters. Buttons replay the pipeline's recorded result for that action and change nothing outside your browser.</span>
-    </div>
-    <div id="view"></div>
-  </main>
-</div>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#/board" aria-label="Insurance faxes board">
+      <span class="mark"><img src="assets/arfa-mark-navy.png" alt=""></span>
+      <span><span class="brand-title">ARFA</span><span class="brand-sub">Insurance faxes</span></span>
+    </a>
+    <nav id="tabs" aria-label="Pages"></nav>
+    <span class="tag">Synthetic data</span>
+  </div>
+</header>
+<main class="main" id="view"></main>
+<div id="scrim" class="scrim" hidden></div>
+<aside id="panel" class="panel-drawer" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden></aside>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="app.js"></script>
 </body>

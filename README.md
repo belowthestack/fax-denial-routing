@@ -4,7 +4,17 @@ Incoming payer faxes in, routed work out. This reads a faxed insurance letter, d
 
 **Status: a pilot on synthetic data.** Every payer, member and number in this repo is invented. It has never touched a real patient or a real clinic.
 
-**Live dashboard:** https://fax-denial-routing.pages.dev/ (mirror: https://belowthestack.github.io/fax-denial-routing/; pre-computed from a real pass over the 10 synthetic letters, labeled "Synthetic data" on every screen)
+**Live demo:** https://fax-denial-routing.pages.dev/ (mirror: https://belowthestack.github.io/fax-denial-routing/). It is a board for a therapy clinic's billing coordinator, built to answer one morning question: which insurance faxes came in, and what do I do about each one? Everything on it is made up and labeled "Synthetic data".
+
+![The board: New, Needs you, Ready to send, Done](docs/screenshots/board-desktop.png)
+
+The board has four columns. **New** is a fax that just arrived. **Needs you** is a fax the system wasn't sure about, with the reason in plain words ("The system read the Member ID two different ways. Check it."). **Ready to send** is a sorted letter with the next step already drafted ("Denied: missing paperwork. Send the paperwork they asked for by Dec 5.") and an Approve button. **Done** is filed, sent or ignored. Click a card to see the fax page next to what the system read, each field marked "Sure" or "Check this".
+
+![A card open in the side panel](docs/screenshots/card-panel-desktop.png)
+
+The demo buttons play things that would normally happen on their own: simulate a new fax, send the same fax again (it is skipped), simulate an outage (the fax is kept and can be retried), and reset. A second page, [How it works](https://fax-denial-routing.pages.dev/#/how), explains the design for technical reviewers, with the recorded results on the 10 letters and the list of rules. It also has phone-width layouts:
+
+<img src="docs/screenshots/board-mobile.png" alt="The board on a phone" width="260">
 
 ## What it does
 
@@ -74,7 +84,7 @@ pip install -r requirements.txt
 python -m pytest
 ```
 
-The suite holds 64 tests with no network and no AWS account. It replays the captured Bedrock payloads.
+The suite holds 75 tests with no network and no AWS account. It replays the captured Bedrock payloads.
 
 ```bash
 # the API, replaying the captured model outputs (no AWS needed)
@@ -94,6 +104,8 @@ python scripts/capture_bedrock.py --model us.anthropic.claude-haiku-4-5-20251001
 python scripts/capture_bedrock.py --model us.anthropic.claude-sonnet-4-6 --label sonnet-4-6
 python scripts/export_demo.py
 python -m http.server 8765 --directory dashboard
+# retake the screenshots and check both layouts, the demo buttons and the wording (needs Playwright)
+python scripts/capture_screenshots.py
 ```
 
 ### What the tests check
@@ -104,6 +116,7 @@ python -m http.server 8765 --directory dashboard
 - A model outage dead-letters the fax and alerts, a failing alert does not hide the dead letter, and a retry processes the same fax once.
 - Nothing can be dispatched without a named approver.
 - Every rule that can fire is documented, and every intake path builds fields through the one shared schema.
+- The plain-language layer: each denial reason has one fixed next-step template, a partly approved letter says what was actually cut (the dates or the units), every card lands in the right board column, and no card text contains a rule code, a model name or other jargon.
 
 ## Design decisions
 
@@ -122,7 +135,8 @@ python -m http.server 8765 --directory dashboard
 - **Synthetic data only.** Nothing here has been tried on real faxes. Real payer letters vary far more than 10 generated ones, and the reason keyword rules are an example of the approach, not a validated rule set.
 - **No PHI belongs in this setup as it stands.** Faxage, the fax provider the original build used, does not sign a BAA, and its trial for this build has also expired, so `FaxageSource` is an untested placeholder with only its response parser covered by a test. Production needs a BAA-covered fax provider behind the same `FaxSource` interface. I am not claiming HIPAA compliance, and nothing here establishes it.
 - **Bedrock coverage is an account matter.** Using Bedrock for PHI needs a signed BAA with AWS and a review of how the account is configured. That has not been done for this repo.
-- **The live dashboard is not a live system.** It is a static page. The decisions in it were computed by the Python pipeline and recorded, and its buttons replay the recorded result. It cannot take an upload.
+- **The live demo is not a live system.** It is a static page. The decisions, the card wording and the drafted next steps were all produced by the Python code and recorded, and its buttons replay the recorded result. It cannot take an upload.
+- **The patient names on the board are invented display names.** They are not printed on the sample faxes (the PDFs and their recorded model replies are fixed), and the side panel says so.
 - **The API has a single shared bearer token and no user accounts.** Per-user authentication, rate limits and request signing for the fax-provider webhook would be required before real use.
 - **SQLite and a single process.** Fine for a pilot. A real deployment wants Postgres, backups and a job queue.
 - **Small evaluation.** The model comparison is 9 letters and one try per model.
@@ -144,7 +158,9 @@ faxrouting/audit.py       whitelisted audit writer
 faxrouting/api.py         FastAPI service
 faxrouting/sources.py     folder source and the Faxage placeholder
 fixtures/                 10 synthetic letters, ground truth, captured Bedrock payloads
-dashboard/                static dashboard (data/demo.json comes from scripts/export_demo.py)
+faxrouting/messages.py    plain-language templates: one-line summaries, why it is here, next steps
+faxrouting/board.py       turns database rows into board cards and picks each card's column
+dashboard/                the static board (data/demo.json comes from scripts/export_demo.py)
 tests/                    pytest suite
 n8n/                      sanitized workflow exports
 ```
