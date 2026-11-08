@@ -1,0 +1,74 @@
+{
+  "fixture": "09_partial_dates_missing_documentation",
+  "content_sha256": "66b848ff00fad0a4dbe4088b560d50cd224ea440cc06ce99779be987af6496ac",
+  "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "captured_at": "2026-11-08T01:49:11+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3961,
+    "outputTokens": 567,
+    "totalTokens": 4528
+  },
+  "tool_input": {
+    "doc_type": "partial_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Peachtree Mutual Health (SAMPLE)",
+        "confidence": 0.99
+      },
+      "member_id": {
+        "value": "PMH82776104",
+        "confidence": 0.99
+      },
+      "auth_number": {
+        "value": "AUTH-2026-80391",
+        "confidence": 0.99
+      },
+      "service_code": {
+        "value": "97153",
+        "confidence": 0.99
+      },
+      "requested_units": {
+        "value": "480",
+        "confidence": 0.99
+      },
+      "approved_units": {
+        "value": "480",
+        "confidence": 0.99
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 0.99
+      },
+      "requested_end": {
+        "value": "2027-04-30",
+        "confidence": 0.99
+      },
+      "approved_start": {
+        "value": "2026-11-01",
+        "confidence": 0.99
+      },
+      "approved_end": {
+        "value": "2027-01-15",
+        "confidence": 0.99
+      },
+      "decision_text": {
+        "value": "Approved in part",
+        "confidence": 0.99
+      },
+      "denial_reason_text": {
+        "value": "Approval is limited to 75 days. Additional documentation is required to authorize the remaining period.",
+        "confidence": 0.99
+      },
+      "letter_date": {
+        "value": "2026-11-05",
+        "confidence": 0.99
+      },
+      "appeal_deadline": {
+        "value": "2026-12-05",
+        "confidence": 0.99
+      }
+    },
+    "notes": "Clear, legible fax. This is a synthetic sample document as noted at the bottom of the page. All fields are clearly printed and easily readable."
+  }
+}

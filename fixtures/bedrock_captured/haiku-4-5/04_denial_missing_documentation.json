@@ -1,0 +1,74 @@
+{
+  "fixture": "04_denial_missing_documentation",
+  "content_sha256": "a1f72f12810d2cbe023a4a7322057ccba4ce26c66a67849d595360143ce9ab3d",
+  "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "captured_at": "2026-11-08T01:48:56+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3961,
+    "outputTokens": 538,
+    "totalTokens": 4499
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Summit Care Alliance (SAMPLE)",
+        "confidence": 0.95
+      },
+      "member_id": {
+        "value": "SCA71049388",
+        "confidence": 0.95
+      },
+      "auth_number": {
+        "value": "SC-8841270",
+        "confidence": 0.95
+      },
+      "service_code": {
+        "value": "92507",
+        "confidence": 0.95
+      },
+      "requested_units": {
+        "value": "48",
+        "confidence": 0.95
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 0.95
+      },
+      "requested_start": {
+        "value": "2026-11-15",
+        "confidence": 0.95
+      },
+      "requested_end": {
+        "value": "2027-02-14",
+        "confidence": 0.95
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 0.95
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 0.95
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 0.95
+      },
+      "denial_reason_text": {
+        "value": "Authorization could not be completed: additional documentation was not received (current treatment plan and progress notes).",
+        "confidence": 0.95
+      },
+      "letter_date": {
+        "value": "2026-11-05",
+        "confidence": 0.95
+      },
+      "appeal_deadline": {
+        "value": "2026-12-05",
+        "confidence": 0.95
+      }
+    },
+    "notes": "Clean fax with clear text. This is a synthetic sample document as noted at the bottom of the page."
+  }
+}

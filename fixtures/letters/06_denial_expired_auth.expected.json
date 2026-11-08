@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "full_denial",
+  "queue": "expired_auth",
+  "reason": "expired_auth",
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Magnolia State Health Plan (SAMPLE)",
+    "member_id": "MSH11928834",
+    "auth_number": "AUTH-2026-20155",
+    "service_code": "97155",
+    "requested_units": 80,
+    "approved_units": 0,
+    "requested_start": "2026-11-01",
+    "requested_end": "2026-12-31",
+    "approved_start": null,
+    "approved_end": null,
+    "decision_text": "Denied",
+    "denial_reason_text": "The authorization period has ended. The requested dates of service are outside the authorized period (expired 2026-08-31).",
+    "letter_date": "2026-11-02",
+    "appeal_deadline": "2026-12-17"
+  }
+}

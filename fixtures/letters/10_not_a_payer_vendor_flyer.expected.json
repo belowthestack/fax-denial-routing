@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "not_payer_response",
+  "queue": "not_payer_response",
+  "reason": null,
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Lakeshore Therapy Supply (SAMPLE)",
+    "member_id": null,
+    "auth_number": null,
+    "service_code": null,
+    "requested_units": null,
+    "approved_units": null,
+    "requested_start": null,
+    "requested_end": null,
+    "approved_start": null,
+    "approved_end": null,
+    "decision_text": null,
+    "denial_reason_text": null,
+    "letter_date": "2026-11-03",
+    "appeal_deadline": null
+  }
+}

@@ -1,0 +1,3715 @@
+{
+ "meta": {
+  "synthetic": true,
+  "readers": [
+   "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+   "us.anthropic.claude-sonnet-4-6"
+  ],
+  "captured_at": "2026-11-08",
+  "outage_fixture": "06_denial_expired_auth",
+  "alerts": [
+   "fax fax_2f2e9df8eb55 dead-lettered at extract: ConnectionError"
+  ],
+  "fixture_count": 10
+ },
+ "base": {
+  "faxes": {
+   "fax_2f2e9df8eb55": {
+    "fax_id": "fax_2f2e9df8eb55",
+    "content_hash": "40b061dc431074b416cf2b2564f96e3868c185855653c42958f15de97ebaa6f2",
+    "source": "folder",
+    "source_key": "folder:06_denial_expired_auth.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": null,
+    "status": "dead_letter",
+    "fixture": "06_denial_expired_auth"
+   },
+   "fax_9c111a775920": {
+    "fax_id": "fax_9c111a775920",
+    "content_hash": "55739255b690a58438e743b0340def82ff95c6dcd4b152c32bc9a7ad823830cc",
+    "source": "folder",
+    "source_key": "folder:01_approved_aba_assessment.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "01_approved_aba_assessment"
+   },
+   "fax_aa06846ef0e1": {
+    "fax_id": "fax_aa06846ef0e1",
+    "content_hash": "2fdba590633149f8cbc0c1f1ae2adfd09b689bbec10056c5fb01212edb9d9823",
+    "source": "folder",
+    "source_key": "folder:02_approved_scanned_blurry.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "02_approved_scanned_blurry"
+   },
+   "fax_3247801ddcf8": {
+    "fax_id": "fax_3247801ddcf8",
+    "content_hash": "f5e68ccb9c59683c4ec2feba9af4a416c0b30aa8e148144bc06e87433a978b35",
+    "source": "folder",
+    "source_key": "folder:03_denial_medical_necessity.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "03_denial_medical_necessity"
+   },
+   "fax_7501b677d87e": {
+    "fax_id": "fax_7501b677d87e",
+    "content_hash": "a1f72f12810d2cbe023a4a7322057ccba4ce26c66a67849d595360143ce9ab3d",
+    "source": "folder",
+    "source_key": "folder:04_denial_missing_documentation.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "04_denial_missing_documentation"
+   },
+   "fax_b7d8f1a9f1e3": {
+    "fax_id": "fax_b7d8f1a9f1e3",
+    "content_hash": "db474b79ce4577e944f3f968ebcdd964ac504d26198384a0be8e0603f56712be",
+    "source": "folder",
+    "source_key": "folder:05_denial_eligibility.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "05_denial_eligibility"
+   },
+   "fax_ca8aaa6e649c": {
+    "fax_id": "fax_ca8aaa6e649c",
+    "content_hash": "ef10eb575f875a6e79083845d5e831c32f1ebf870b228cfd411012a5fb13947f",
+    "source": "folder",
+    "source_key": "folder:07_denial_coding_scanned.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "07_denial_coding_scanned"
+   },
+   "fax_90308d5a7069": {
+    "fax_id": "fax_90308d5a7069",
+    "content_hash": "67e42f545c376d0c387d7762ae120054714cbe9b0913218d58d0bde784e9101c",
+    "source": "folder",
+    "source_key": "folder:08_partial_units_medical_necessity.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "08_partial_units_medical_necessity"
+   },
+   "fax_daffb748a803": {
+    "fax_id": "fax_daffb748a803",
+    "content_hash": "66b848ff00fad0a4dbe4088b560d50cd224ea440cc06ce99779be987af6496ac",
+    "source": "folder",
+    "source_key": "folder:09_partial_dates_missing_documentation.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "09_partial_dates_missing_documentation"
+   },
+   "fax_5820dc3089d5": {
+    "fax_id": "fax_5820dc3089d5",
+    "content_hash": "ed1111102c7ee28db460a34a113d96632f89c7d3be9372265259b64289c32bcd",
+    "source": "folder",
+    "source_key": "folder:10_not_a_payer_vendor_flyer.pdf",
+    "received_at": "2026-11-08T01:56:28+00:00",
+    "page_count": 1,
+    "status": "processed",
+    "fixture": "10_not_a_payer_vendor_flyer"
+   }
+  },
+  "documents": {
+   "doc_bf53e2da88c8": {
+    "doc_id": "doc_bf53e2da88c8",
+    "fax_id": "fax_9c111a775920",
+    "doc_type": "auth_approved",
+    "denial_reason": null,
+    "queue": "approved_filed",
+    "tentative_queue": "approved_filed",
+    "priority": "normal",
+    "needs_review": 0,
+    "review_reasons": [],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Peachtree Mutual Health (SAMPLE)",
+       "confidence": 0.99
+      },
+      "member_id": {
+       "value": "PMH48201937",
+       "confidence": 0.99
+      },
+      "auth_number": {
+       "value": "AUTH-2026-77412",
+       "confidence": 0.99
+      },
+      "service_code": {
+       "value": "97153",
+       "confidence": 0.99
+      },
+      "requested_units": {
+       "value": 480,
+       "confidence": 0.99
+      },
+      "approved_units": {
+       "value": 480,
+       "confidence": 0.99
+      },
+      "requested_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "requested_end": {
+       "value": "2027-04-30",
+       "confidence": 0.99
+      },
+      "approved_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "approved_end": {
+       "value": "2027-04-30",
+       "confidence": 0.99
+      },
+      "decision_text": {
+       "value": "Approved",
+       "confidence": 0.99
+      },
+      "denial_reason_text": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "letter_date": {
+       "value": "2026-10-28",
+       "confidence": 0.99
+      },
+      "appeal_deadline": {
+       "value": null,
+       "confidence": 0.95
+      }
+     },
+     "doc_type_hint": "auth_approved",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clean fax with clear formatting. All fields are legible. This is a synthetic sample document as noted at the bottom of the page.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-APP-01",
+      "detail": "Units and dates approved as requested."
+     },
+     {
+      "rule_id": "Q-APP-01",
+      "detail": "Approval: filed, no denial action."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_817e032986b1": {
+    "doc_id": "doc_817e032986b1",
+    "fax_id": "fax_aa06846ef0e1",
+    "doc_type": "auth_approved",
+    "denial_reason": null,
+    "queue": "human_review",
+    "tentative_queue": "approved_filed",
+    "priority": "normal",
+    "needs_review": 1,
+    "review_reasons": [
+     "approved_units missing"
+    ],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Blue Heron Benefits (SAMPLE)",
+       "confidence": 0.95
+      },
+      "member_id": {
+       "value": "BHB99320415",
+       "confidence": 0.95
+      },
+      "auth_number": {
+       "value": "BH-5520817",
+       "confidence": 0.95
+      },
+      "service_code": {
+       "value": null,
+       "confidence": 0.3
+      },
+      "requested_units": {
+       "value": null,
+       "confidence": 0.2
+      },
+      "approved_units": {
+       "value": null,
+       "confidence": 0.2
+      },
+      "requested_start": {
+       "value": "2026-11-09",
+       "confidence": 0.95
+      },
+      "requested_end": {
+       "value": "2027-02-08",
+       "confidence": 0.95
+      },
+      "approved_start": {
+       "value": "2026-11-09",
+       "confidence": 0.95
+      },
+      "approved_end": {
+       "value": "2027-02-08",
+       "confidence": 0.95
+      },
+      "decision_text": {
+       "value": "Approved",
+       "confidence": 0.95
+      },
+      "denial_reason_text": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "letter_date": {
+       "value": "2026-11-02",
+       "confidence": 0.95
+      },
+      "appeal_deadline": {
+       "value": null,
+       "confidence": 0.0
+      }
+     },
+     "doc_type_hint": "auth_approved",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "CPT/HCPCS field shows only partial characters that appear obscured or unclear. Requested Units and Approved Units fields also appear obscured or unclear in the document. No appeal deadline information is visible on this page.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-APP-02",
+      "detail": "Decision wording says approved; no unit counts to confirm."
+     },
+     {
+      "rule_id": "G-MISSING-01",
+      "detail": "Required field approved_units is missing for auth_approved."
+     },
+     {
+      "rule_id": "Q-APP-01",
+      "detail": "Approval: filed, no denial action."
+     },
+     {
+      "rule_id": "Q-REVIEW-01",
+      "detail": "At least one check failed: routed to human review with the reasons attached."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_c250c70ba51c": {
+    "doc_id": "doc_c250c70ba51c",
+    "fax_id": "fax_3247801ddcf8",
+    "doc_type": "full_denial",
+    "denial_reason": "medical_necessity",
+    "queue": "medical_necessity",
+    "tentative_queue": "medical_necessity",
+    "priority": "normal",
+    "needs_review": 0,
+    "review_reasons": [],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Magnolia State Health Plan (SAMPLE)",
+       "confidence": 0.99
+      },
+      "member_id": {
+       "value": "MSH30481226",
+       "confidence": 0.99
+      },
+      "auth_number": {
+       "value": "REF-2026-0091823",
+       "confidence": 0.99
+      },
+      "service_code": {
+       "value": "97153",
+       "confidence": 0.99
+      },
+      "requested_units": {
+       "value": 600,
+       "confidence": 0.99
+      },
+      "approved_units": {
+       "value": 0,
+       "confidence": 0.99
+      },
+      "requested_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "requested_end": {
+       "value": "2027-04-30",
+       "confidence": 0.99
+      },
+      "approved_start": {
+       "value": null,
+       "confidence": 0.99
+      },
+      "approved_end": {
+       "value": null,
+       "confidence": 0.99
+      },
+      "decision_text": {
+       "value": "Denied",
+       "confidence": 0.99
+      },
+      "denial_reason_text": {
+       "value": "The requested level of care does not meet medical necessity criteria for the service requested.",
+       "confidence": 0.99
+      },
+      "letter_date": {
+       "value": "2026-11-03",
+       "confidence": 0.99
+      },
+      "appeal_deadline": {
+       "value": "2027-01-02",
+       "confidence": 0.99
+      }
+     },
+     "doc_type_hint": "full_denial",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clean, legible fax. This is a synthetic sample document as noted at the bottom of the page. All fields clearly printed and easily readable.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-DEN-01",
+      "detail": "approved_units is 0: nothing approved, full denial."
+     },
+     {
+      "rule_id": "R-MEDICAL_NECESSITY",
+      "detail": "Reason text matches medical_necessity."
+     },
+     {
+      "rule_id": "Q-MEDICAL_NECESSITY",
+      "detail": "Routed to the medical_necessity queue."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_c5a5043d0599": {
+    "doc_id": "doc_c5a5043d0599",
+    "fax_id": "fax_7501b677d87e",
+    "doc_type": "full_denial",
+    "denial_reason": "missing_documentation",
+    "queue": "missing_documentation",
+    "tentative_queue": "missing_documentation",
+    "priority": "high",
+    "needs_review": 0,
+    "review_reasons": [],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Summit Care Alliance (SAMPLE)",
+       "confidence": 0.95
+      },
+      "member_id": {
+       "value": "SCA71049388",
+       "confidence": 0.95
+      },
+      "auth_number": {
+       "value": "SC-8841270",
+       "confidence": 0.95
+      },
+      "service_code": {
+       "value": "92507",
+       "confidence": 0.95
+      },
+      "requested_units": {
+       "value": 48,
+       "confidence": 0.95
+      },
+      "approved_units": {
+       "value": 0,
+       "confidence": 0.95
+      },
+      "requested_start": {
+       "value": "2026-11-15",
+       "confidence": 0.95
+      },
+      "requested_end": {
+       "value": "2027-02-14",
+       "confidence": 0.95
+      },
+      "approved_start": {
+       "value": null,
+       "confidence": 0.95
+      },
+      "approved_end": {
+       "value": null,
+       "confidence": 0.95
+      },
+      "decision_text": {
+       "value": "Denied",
+       "confidence": 0.95
+      },
+      "denial_reason_text": {
+       "value": "Authorization could not be completed: additional documentation was not received (current treatment plan and progress notes).",
+       "confidence": 0.95
+      },
+      "letter_date": {
+       "value": "2026-11-05",
+       "confidence": 0.95
+      },
+      "appeal_deadline": {
+       "value": "2026-12-05",
+       "confidence": 0.95
+      }
+     },
+     "doc_type_hint": "full_denial",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clean fax with clear text. This is a synthetic sample document as noted at the bottom of the page.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-DEN-01",
+      "detail": "approved_units is 0: nothing approved, full denial."
+     },
+     {
+      "rule_id": "R-MISSING_DOCUMENTATION",
+      "detail": "Reason text matches missing_documentation."
+     },
+     {
+      "rule_id": "P-DEADLINE-01",
+      "detail": "Appeal window is 30 days from the letter date (30 or fewer)."
+     },
+     {
+      "rule_id": "Q-MISSING_DOCUMENTATION",
+      "detail": "Routed to the missing_documentation queue."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_a4f20ab05f6c": {
+    "doc_id": "doc_a4f20ab05f6c",
+    "fax_id": "fax_b7d8f1a9f1e3",
+    "doc_type": "full_denial",
+    "denial_reason": "eligibility",
+    "queue": "human_review",
+    "tentative_queue": "eligibility",
+    "priority": "normal",
+    "needs_review": 1,
+    "review_reasons": [
+     "member_id low confidence",
+     "readers disagree on member_id"
+    ],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Peachtree Mutual Health (SAMPLE)",
+       "confidence": 0.99
+      },
+      "member_id": {
+       "value": "PMH6113074",
+       "confidence": 0.0
+      },
+      "auth_number": {
+       "value": "PM-3390184",
+       "confidence": 0.99
+      },
+      "service_code": {
+       "value": "97153",
+       "confidence": 0.99
+      },
+      "requested_units": {
+       "value": 320,
+       "confidence": 0.99
+      },
+      "approved_units": {
+       "value": 0,
+       "confidence": 0.99
+      },
+      "requested_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "requested_end": {
+       "value": "2027-01-31",
+       "confidence": 0.99
+      },
+      "approved_start": {
+       "value": null,
+       "confidence": 0.99
+      },
+      "approved_end": {
+       "value": null,
+       "confidence": 0.99
+      },
+      "decision_text": {
+       "value": "Denied",
+       "confidence": 0.99
+      },
+      "denial_reason_text": {
+       "value": "Member coverage was terminated effective 2026-09-30; the member is not eligible for the requested dates of service.",
+       "confidence": 0.99
+      },
+      "letter_date": {
+       "value": "2026-11-05",
+       "confidence": 0.99
+      },
+      "appeal_deadline": {
+       "value": "2027-01-04",
+       "confidence": 0.99
+      }
+     },
+     "doc_type_hint": "full_denial",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clear, legible fax. All fields clearly printed. This is a synthetic sample document as noted at the bottom of the page.",
+     "disagreements": [
+      "member_id"
+     ]
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-DEN-01",
+      "detail": "approved_units is 0: nothing approved, full denial."
+     },
+     {
+      "rule_id": "R-ELIGIBILITY",
+      "detail": "Reason text matches eligibility."
+     },
+     {
+      "rule_id": "G-DISAGREE-01",
+      "detail": "Two independent readers disagree on member_id."
+     },
+     {
+      "rule_id": "G-CONF-01",
+      "detail": "member_id confidence 0.00 is below 0.80."
+     },
+     {
+      "rule_id": "Q-ELIGIBILITY",
+      "detail": "Routed to the eligibility queue."
+     },
+     {
+      "rule_id": "Q-REVIEW-01",
+      "detail": "At least one check failed: routed to human review with the reasons attached."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_7c66f5927f79": {
+    "doc_id": "doc_7c66f5927f79",
+    "fax_id": "fax_ca8aaa6e649c",
+    "doc_type": "full_denial",
+    "denial_reason": "coding",
+    "queue": "human_review",
+    "tentative_queue": "coding",
+    "priority": "normal",
+    "needs_review": 1,
+    "review_reasons": [
+     "member_id low confidence",
+     "readers disagree on member_id"
+    ],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Blue Heron Benefits (SAMPLE)",
+       "confidence": 0.95
+      },
+      "member_id": {
+       "value": "BHB20617364",
+       "confidence": 0.0
+      },
+      "auth_number": {
+       "value": "BH-6671902",
+       "confidence": 0.95
+      },
+      "service_code": {
+       "value": "92507",
+       "confidence": 0.95
+      },
+      "requested_units": {
+       "value": 24,
+       "confidence": 0.95
+      },
+      "approved_units": {
+       "value": 0,
+       "confidence": 0.95
+      },
+      "requested_start": {
+       "value": "2026-11-10",
+       "confidence": 0.95
+      },
+      "requested_end": {
+       "value": "2027-01-31",
+       "confidence": 0.95
+      },
+      "approved_start": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "approved_end": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "decision_text": {
+       "value": "Denied",
+       "confidence": 0.95
+      },
+      "denial_reason_text": {
+       "value": "Invalid modifier submitted with procedure code 92507. Resubmit with the corrected code and modifier. The request was returned because of an error in how the service was submitted.",
+       "confidence": 0.9
+      },
+      "letter_date": {
+       "value": "2026-11-04",
+       "confidence": 0.95
+      },
+      "appeal_deadline": {
+       "value": "2027-01-03",
+       "confidence": 0.95
+      }
+     },
+     "doc_type_hint": "full_denial",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clear fax quality. Document is marked as synthetic sample data. All fields are clearly legible.",
+     "disagreements": [
+      "member_id"
+     ]
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-DEN-01",
+      "detail": "approved_units is 0: nothing approved, full denial."
+     },
+     {
+      "rule_id": "R-CODING",
+      "detail": "Reason text matches coding."
+     },
+     {
+      "rule_id": "G-DISAGREE-01",
+      "detail": "Two independent readers disagree on member_id."
+     },
+     {
+      "rule_id": "G-CONF-01",
+      "detail": "member_id confidence 0.00 is below 0.80."
+     },
+     {
+      "rule_id": "Q-CODING",
+      "detail": "Routed to the coding queue."
+     },
+     {
+      "rule_id": "Q-REVIEW-01",
+      "detail": "At least one check failed: routed to human review with the reasons attached."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_74852b0f79a5": {
+    "doc_id": "doc_74852b0f79a5",
+    "fax_id": "fax_90308d5a7069",
+    "doc_type": "partial_denial",
+    "denial_reason": "medical_necessity",
+    "queue": "medical_necessity",
+    "tentative_queue": "medical_necessity",
+    "priority": "normal",
+    "needs_review": 0,
+    "review_reasons": [],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Summit Care Alliance (SAMPLE)",
+       "confidence": 0.99
+      },
+      "member_id": {
+       "value": "SCA55208816",
+       "confidence": 0.99
+      },
+      "auth_number": {
+       "value": "SC-AUTH-2026-3380",
+       "confidence": 0.99
+      },
+      "service_code": {
+       "value": "97153",
+       "confidence": 0.99
+      },
+      "requested_units": {
+       "value": 600,
+       "confidence": 0.99
+      },
+      "approved_units": {
+       "value": 360,
+       "confidence": 0.99
+      },
+      "requested_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "requested_end": {
+       "value": "2027-04-30",
+       "confidence": 0.99
+      },
+      "approved_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "approved_end": {
+       "value": "2027-04-30",
+       "confidence": 0.99
+      },
+      "decision_text": {
+       "value": "Approved in part",
+       "confidence": 0.99
+      },
+      "denial_reason_text": {
+       "value": "Remaining units are not approved. The additional units do not meet medical necessity guidelines.",
+       "confidence": 0.99
+      },
+      "letter_date": {
+       "value": "2026-11-04",
+       "confidence": 0.99
+      },
+      "appeal_deadline": {
+       "value": "2026-12-30",
+       "confidence": 0.99
+      }
+     },
+     "doc_type_hint": "partial_denial",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clear, legible fax. Synthetic sample document as noted at bottom of page. All fields clearly printed and easily readable.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-PART-01",
+      "detail": "approved_units 360 is less than requested_units 600: partial denial."
+     },
+     {
+      "rule_id": "R-MEDICAL_NECESSITY",
+      "detail": "Reason text matches medical_necessity."
+     },
+     {
+      "rule_id": "Q-MEDICAL_NECESSITY",
+      "detail": "Routed to the medical_necessity queue."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_26ac575298c7": {
+    "doc_id": "doc_26ac575298c7",
+    "fax_id": "fax_daffb748a803",
+    "doc_type": "partial_denial",
+    "denial_reason": "missing_documentation",
+    "queue": "missing_documentation",
+    "tentative_queue": "missing_documentation",
+    "priority": "high",
+    "needs_review": 0,
+    "review_reasons": [],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": "Peachtree Mutual Health (SAMPLE)",
+       "confidence": 0.99
+      },
+      "member_id": {
+       "value": "PMH82776104",
+       "confidence": 0.99
+      },
+      "auth_number": {
+       "value": "AUTH-2026-80391",
+       "confidence": 0.99
+      },
+      "service_code": {
+       "value": "97153",
+       "confidence": 0.99
+      },
+      "requested_units": {
+       "value": 480,
+       "confidence": 0.99
+      },
+      "approved_units": {
+       "value": 480,
+       "confidence": 0.99
+      },
+      "requested_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "requested_end": {
+       "value": "2027-04-30",
+       "confidence": 0.99
+      },
+      "approved_start": {
+       "value": "2026-11-01",
+       "confidence": 0.99
+      },
+      "approved_end": {
+       "value": "2027-01-15",
+       "confidence": 0.99
+      },
+      "decision_text": {
+       "value": "Approved in part",
+       "confidence": 0.99
+      },
+      "denial_reason_text": {
+       "value": "Approval is limited to 75 days. Additional documentation is required to authorize the remaining period.",
+       "confidence": 0.99
+      },
+      "letter_date": {
+       "value": "2026-11-05",
+       "confidence": 0.99
+      },
+      "appeal_deadline": {
+       "value": "2026-12-05",
+       "confidence": 0.99
+      }
+     },
+     "doc_type_hint": "partial_denial",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "Clear, legible fax. This is a synthetic sample document as noted at the bottom of the page. All fields are clearly printed and easily readable.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-PART-02",
+      "detail": "Approved dates cover less than the requested dates: partial denial."
+     },
+     {
+      "rule_id": "R-MISSING_DOCUMENTATION",
+      "detail": "Reason text matches missing_documentation."
+     },
+     {
+      "rule_id": "P-DEADLINE-01",
+      "detail": "Appeal window is 30 days from the letter date (30 or fewer)."
+     },
+     {
+      "rule_id": "Q-MISSING_DOCUMENTATION",
+      "detail": "Routed to the missing_documentation queue."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   },
+   "doc_4197bc8ea969": {
+    "doc_id": "doc_4197bc8ea969",
+    "fax_id": "fax_5820dc3089d5",
+    "doc_type": "not_payer_response",
+    "denial_reason": null,
+    "queue": "not_payer_response",
+    "tentative_queue": "not_payer_response",
+    "priority": "normal",
+    "needs_review": 0,
+    "review_reasons": [],
+    "extraction": {
+     "fields": {
+      "payer_name": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "member_id": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "auth_number": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "service_code": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "requested_units": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "approved_units": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "requested_start": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "requested_end": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "approved_start": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "approved_end": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "decision_text": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "denial_reason_text": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "letter_date": {
+       "value": null,
+       "confidence": 1.0
+      },
+      "appeal_deadline": {
+       "value": null,
+       "confidence": 1.0
+      }
+     },
+     "doc_type_hint": "not_payer_response",
+     "backend": "replay+replay",
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "page_count": 1,
+     "notes": "This is a promotional fax from Lakeshore Therapy Supply advertising a Fall Therapy Equipment Sale. It is not a payer authorization response. The document is marked as synthetic sample data and is not from a real organization.",
+     "disagreements": []
+    },
+    "rule_hits": [
+     {
+      "rule_id": "C-NPR-01",
+      "detail": "No payer plus member/auth identifier and no decision wording: not a payer response."
+     },
+     {
+      "rule_id": "Q-NPR-01",
+      "detail": "Not a payer response: filed, no action."
+     }
+    ],
+    "state": "open",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "resolved_at": null
+   }
+  },
+  "actions": {
+   "act_cf77d8da55": {
+    "action_id": "act_cf77d8da55",
+    "doc_id": "doc_c250c70ba51c",
+    "kind": "appeal_or_peer_review",
+    "draft": "Prepare an appeal or peer-to-peer request to Magnolia State Health Plan (SAMPLE) for auth/ref REF-2026-0091823. A clinician reviews before anything is sent.",
+    "status": "pending_approval",
+    "approved_by": null,
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "decided_at": null
+   },
+   "act_a30fdff6aa": {
+    "action_id": "act_a30fdff6aa",
+    "doc_id": "doc_c5a5043d0599",
+    "kind": "send_records",
+    "draft": "Request the missing documentation from the clinical team, then send it to Summit Care Alliance (SAMPLE) for auth/ref SC-8841270.",
+    "status": "pending_approval",
+    "approved_by": null,
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "decided_at": null
+   },
+   "act_86b2df48c8": {
+    "action_id": "act_86b2df48c8",
+    "doc_id": "doc_74852b0f79a5",
+    "kind": "appeal_or_peer_review",
+    "draft": "Prepare an appeal or peer-to-peer request to Summit Care Alliance (SAMPLE) for auth/ref SC-AUTH-2026-3380. A clinician reviews before anything is sent.",
+    "status": "pending_approval",
+    "approved_by": null,
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "decided_at": null
+   },
+   "act_e9ec9b6573": {
+    "action_id": "act_e9ec9b6573",
+    "doc_id": "doc_26ac575298c7",
+    "kind": "send_records",
+    "draft": "Request the missing documentation from the clinical team, then send it to Peachtree Mutual Health (SAMPLE) for auth/ref AUTH-2026-80391.",
+    "status": "pending_approval",
+    "approved_by": null,
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "decided_at": null
+   }
+  },
+  "dead_letter": {
+   "dl_5b86aba6cb": {
+    "dl_id": "dl_5b86aba6cb",
+    "fax_id": "fax_2f2e9df8eb55",
+    "stage": "extract",
+    "error_class": "ConnectionError",
+    "created_at": "2026-11-08T01:56:28+00:00",
+    "state": "open"
+   }
+  },
+  "audit_log": {
+   "1": {
+    "seq": 1,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_2f2e9df8eb55",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "2": {
+    "seq": 2,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "dead_lettered",
+    "fax_id": "fax_2f2e9df8eb55",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "error_class": "ConnectionError",
+     "stage": "extract"
+    }
+   },
+   "3": {
+    "seq": 3,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_9c111a775920",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "4": {
+    "seq": 4,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_9c111a775920",
+    "doc_id": "doc_bf53e2da88c8",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "auth_approved",
+     "min_confidence": 0.99,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": false,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "approved_filed",
+     "rule_ids": [
+      "C-APP-01",
+      "Q-APP-01"
+     ],
+     "tentative_queue": "approved_filed"
+    }
+   },
+   "5": {
+    "seq": 5,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_aa06846ef0e1",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "6": {
+    "seq": 6,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_aa06846ef0e1",
+    "doc_id": "doc_817e032986b1",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "auth_approved",
+     "min_confidence": 0.95,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": true,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "human_review",
+     "review_reason_codes": [
+      "missing:approved_units"
+     ],
+     "rule_ids": [
+      "C-APP-02",
+      "G-MISSING-01",
+      "Q-APP-01",
+      "Q-REVIEW-01"
+     ],
+     "tentative_queue": "approved_filed"
+    }
+   },
+   "7": {
+    "seq": 7,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_3247801ddcf8",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "8": {
+    "seq": 8,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_3247801ddcf8",
+    "doc_id": "doc_c250c70ba51c",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "full_denial",
+     "min_confidence": 0.99,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": false,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "medical_necessity",
+     "rule_ids": [
+      "C-DEN-01",
+      "Q-MEDICAL_NECESSITY",
+      "R-MEDICAL_NECESSITY"
+     ],
+     "tentative_queue": "medical_necessity"
+    }
+   },
+   "9": {
+    "seq": 9,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "action_proposed",
+    "fax_id": null,
+    "doc_id": "doc_c250c70ba51c",
+    "actor": "system",
+    "detail": {
+     "action_id": "act_cf77d8da55",
+     "action_kind": "appeal_or_peer_review"
+    }
+   },
+   "10": {
+    "seq": 10,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_7501b677d87e",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "11": {
+    "seq": 11,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_7501b677d87e",
+    "doc_id": "doc_c5a5043d0599",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "full_denial",
+     "min_confidence": 0.95,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": false,
+     "page_count": 1,
+     "priority": "high",
+     "queue": "missing_documentation",
+     "rule_ids": [
+      "C-DEN-01",
+      "P-DEADLINE-01",
+      "Q-MISSING_DOCUMENTATION",
+      "R-MISSING_DOCUMENTATION"
+     ],
+     "tentative_queue": "missing_documentation"
+    }
+   },
+   "12": {
+    "seq": 12,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "action_proposed",
+    "fax_id": null,
+    "doc_id": "doc_c5a5043d0599",
+    "actor": "system",
+    "detail": {
+     "action_id": "act_a30fdff6aa",
+     "action_kind": "send_records"
+    }
+   },
+   "13": {
+    "seq": 13,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_b7d8f1a9f1e3",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "14": {
+    "seq": 14,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_b7d8f1a9f1e3",
+    "doc_id": "doc_a4f20ab05f6c",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "full_denial",
+     "min_confidence": 0.0,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": true,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "human_review",
+     "review_reason_codes": [
+      "disagree:member_id",
+      "low_confidence:member_id"
+     ],
+     "rule_ids": [
+      "C-DEN-01",
+      "G-CONF-01",
+      "G-DISAGREE-01",
+      "Q-ELIGIBILITY",
+      "Q-REVIEW-01",
+      "R-ELIGIBILITY"
+     ],
+     "tentative_queue": "eligibility"
+    }
+   },
+   "15": {
+    "seq": 15,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_ca8aaa6e649c",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "16": {
+    "seq": 16,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_ca8aaa6e649c",
+    "doc_id": "doc_7c66f5927f79",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "full_denial",
+     "min_confidence": 0.0,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": true,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "human_review",
+     "review_reason_codes": [
+      "disagree:member_id",
+      "low_confidence:member_id"
+     ],
+     "rule_ids": [
+      "C-DEN-01",
+      "G-CONF-01",
+      "G-DISAGREE-01",
+      "Q-CODING",
+      "Q-REVIEW-01",
+      "R-CODING"
+     ],
+     "tentative_queue": "coding"
+    }
+   },
+   "17": {
+    "seq": 17,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_90308d5a7069",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "18": {
+    "seq": 18,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_90308d5a7069",
+    "doc_id": "doc_74852b0f79a5",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "partial_denial",
+     "min_confidence": 0.99,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": false,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "medical_necessity",
+     "rule_ids": [
+      "C-PART-01",
+      "Q-MEDICAL_NECESSITY",
+      "R-MEDICAL_NECESSITY"
+     ],
+     "tentative_queue": "medical_necessity"
+    }
+   },
+   "19": {
+    "seq": 19,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "action_proposed",
+    "fax_id": null,
+    "doc_id": "doc_74852b0f79a5",
+    "actor": "system",
+    "detail": {
+     "action_id": "act_86b2df48c8",
+     "action_kind": "appeal_or_peer_review"
+    }
+   },
+   "20": {
+    "seq": 20,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_daffb748a803",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "21": {
+    "seq": 21,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_daffb748a803",
+    "doc_id": "doc_26ac575298c7",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "partial_denial",
+     "min_confidence": 0.99,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": false,
+     "page_count": 1,
+     "priority": "high",
+     "queue": "missing_documentation",
+     "rule_ids": [
+      "C-PART-02",
+      "P-DEADLINE-01",
+      "Q-MISSING_DOCUMENTATION",
+      "R-MISSING_DOCUMENTATION"
+     ],
+     "tentative_queue": "missing_documentation"
+    }
+   },
+   "22": {
+    "seq": 22,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "action_proposed",
+    "fax_id": null,
+    "doc_id": "doc_26ac575298c7",
+    "actor": "system",
+    "detail": {
+     "action_id": "act_e9ec9b6573",
+     "action_kind": "send_records"
+    }
+   },
+   "23": {
+    "seq": 23,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "fax_received",
+    "fax_id": "fax_5820dc3089d5",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "source": "folder"
+    }
+   },
+   "24": {
+    "seq": 24,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "document_routed",
+    "fax_id": "fax_5820dc3089d5",
+    "doc_id": "doc_4197bc8ea969",
+    "actor": "system",
+    "detail": {
+     "backend": "replay+replay",
+     "doc_type": "not_payer_response",
+     "min_confidence": 0.0,
+     "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+     "needs_review": false,
+     "page_count": 1,
+     "priority": "normal",
+     "queue": "not_payer_response",
+     "rule_ids": [
+      "C-NPR-01",
+      "Q-NPR-01"
+     ],
+     "tentative_queue": "not_payer_response"
+    }
+   },
+   "25": {
+    "seq": 25,
+    "ts": "2026-11-08T01:56:28+00:00",
+    "event": "duplicate_suppressed",
+    "fax_id": "fax_3247801ddcf8",
+    "doc_id": null,
+    "actor": "system",
+    "detail": {
+     "duplicate_of": "fax_3247801ddcf8",
+     "source": "folder"
+    }
+   }
+  },
+  "outbox": {}
+ },
+ "patches": {
+  "duplicate": {
+   "fax_2f2e9df8eb55": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_2f2e9df8eb55",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_2f2e9df8eb55",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_9c111a775920": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_9c111a775920",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_9c111a775920",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_aa06846ef0e1": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_aa06846ef0e1",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_aa06846ef0e1",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_3247801ddcf8": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_3247801ddcf8",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_3247801ddcf8",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_7501b677d87e": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_7501b677d87e",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_7501b677d87e",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_b7d8f1a9f1e3": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_b7d8f1a9f1e3",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_b7d8f1a9f1e3",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_ca8aaa6e649c": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_ca8aaa6e649c",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_ca8aaa6e649c",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_90308d5a7069": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_90308d5a7069",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_90308d5a7069",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_daffb748a803": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_daffb748a803",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_daffb748a803",
+       "source": "folder"
+      }
+     }
+    ]
+   },
+   "fax_5820dc3089d5": {
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "duplicate_suppressed",
+      "fax_id": "fax_5820dc3089d5",
+      "doc_id": null,
+      "actor": "system",
+      "detail": {
+       "duplicate_of": "fax_5820dc3089d5",
+       "source": "folder"
+      }
+     }
+    ]
+   }
+  },
+  "retry": {
+   "dl_5b86aba6cb": {
+    "faxes": [
+     {
+      "fax_id": "fax_2f2e9df8eb55",
+      "content_hash": "40b061dc431074b416cf2b2564f96e3868c185855653c42958f15de97ebaa6f2",
+      "source": "folder",
+      "source_key": "folder:06_denial_expired_auth.pdf",
+      "received_at": "2026-11-08T01:56:28+00:00",
+      "page_count": 1,
+      "status": "processed",
+      "fixture": "06_denial_expired_auth"
+     }
+    ],
+    "documents": [
+     {
+      "doc_id": "doc_4dbfbdca670a",
+      "fax_id": "fax_2f2e9df8eb55",
+      "doc_type": "full_denial",
+      "denial_reason": "expired_auth",
+      "queue": "expired_auth",
+      "tentative_queue": "expired_auth",
+      "priority": "normal",
+      "needs_review": 0,
+      "review_reasons": [],
+      "extraction": {
+       "fields": {
+        "payer_name": {
+         "value": "Magnolia State Health Plan (SAMPLE)",
+         "confidence": 0.95
+        },
+        "member_id": {
+         "value": "MSH11928834",
+         "confidence": 0.95
+        },
+        "auth_number": {
+         "value": "AUTH-2026-20155",
+         "confidence": 0.95
+        },
+        "service_code": {
+         "value": "97155",
+         "confidence": 0.95
+        },
+        "requested_units": {
+         "value": 80,
+         "confidence": 0.95
+        },
+        "approved_units": {
+         "value": 0,
+         "confidence": 0.95
+        },
+        "requested_start": {
+         "value": "2026-11-01",
+         "confidence": 0.95
+        },
+        "requested_end": {
+         "value": "2026-12-31",
+         "confidence": 0.95
+        },
+        "approved_start": {
+         "value": null,
+         "confidence": 0.95
+        },
+        "approved_end": {
+         "value": null,
+         "confidence": 0.95
+        },
+        "decision_text": {
+         "value": "Denied",
+         "confidence": 0.95
+        },
+        "denial_reason_text": {
+         "value": "The authorization period has ended. The requested dates of service are outside the authorized period (expired 2026-08-31).",
+         "confidence": 0.95
+        },
+        "letter_date": {
+         "value": "2026-11-02",
+         "confidence": 0.95
+        },
+        "appeal_deadline": {
+         "value": "2026-12-17",
+         "confidence": 0.95
+        }
+       },
+       "doc_type_hint": "full_denial",
+       "backend": "replay+replay",
+       "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+       "page_count": 1,
+       "notes": "Clean fax with clear formatting. This is a synthetic sample document as noted at the bottom of the page.",
+       "disagreements": []
+      },
+      "rule_hits": [
+       {
+        "rule_id": "C-DEN-01",
+        "detail": "approved_units is 0: nothing approved, full denial."
+       },
+       {
+        "rule_id": "R-EXPIRED_AUTH",
+        "detail": "Reason text matches expired_auth."
+       },
+       {
+        "rule_id": "Q-EXPIRED_AUTH",
+        "detail": "Routed to the expired_auth queue."
+       }
+      ],
+      "state": "open",
+      "created_at": "2026-11-08T01:56:28+00:00",
+      "resolved_at": null
+     }
+    ],
+    "actions": [
+     {
+      "action_id": "act_a5f4002ecc",
+      "doc_id": "doc_4dbfbdca670a",
+      "kind": "request_reauthorization",
+      "draft": "Start a new authorization request with Magnolia State Health Plan (SAMPLE); the prior authorization (ref AUTH-2026-20155) is expired.",
+      "status": "pending_approval",
+      "approved_by": null,
+      "created_at": "2026-11-08T01:56:28+00:00",
+      "decided_at": null
+     }
+    ],
+    "dead_letter": [
+     {
+      "dl_id": "dl_5b86aba6cb",
+      "fax_id": "fax_2f2e9df8eb55",
+      "stage": "extract",
+      "error_class": "ConnectionError",
+      "created_at": "2026-11-08T01:56:28+00:00",
+      "state": "resolved"
+     }
+    ],
+    "audit_log": [
+     {
+      "seq": 26,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "document_routed",
+      "fax_id": "fax_2f2e9df8eb55",
+      "doc_id": "doc_4dbfbdca670a",
+      "actor": "system",
+      "detail": {
+       "backend": "replay+replay",
+       "doc_type": "full_denial",
+       "min_confidence": 0.95,
+       "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+       "needs_review": false,
+       "page_count": 1,
+       "priority": "normal",
+       "queue": "expired_auth",
+       "retry_of": "dl_5b86aba6cb",
+       "rule_ids": [
+        "C-DEN-01",
+        "Q-EXPIRED_AUTH",
+        "R-EXPIRED_AUTH"
+       ],
+       "tentative_queue": "expired_auth"
+      }
+     },
+     {
+      "seq": 27,
+      "ts": "2026-11-08T01:56:28+00:00",
+      "event": "action_proposed",
+      "fax_id": null,
+      "doc_id": "doc_4dbfbdca670a",
+      "actor": "system",
+      "detail": {
+       "action_id": "act_a5f4002ecc",
+       "action_kind": "request_reauthorization"
+      }
+     }
+    ]
+   }
+  },
+  "review": {
+   "doc_817e032986b1": {
+    "corrections": {
+     "member_id": "BHB99320415",
+     "auth_number": "BH-5520817",
+     "service_code": "97151",
+     "requested_units": 16,
+     "approved_units": 16,
+     "requested_start": "2026-11-09",
+     "requested_end": "2027-02-08",
+     "approved_start": "2026-11-09",
+     "approved_end": "2027-02-08",
+     "decision_text": "Approved",
+     "letter_date": "2026-11-02"
+    },
+    "patch": {
+     "documents": [
+      {
+       "doc_id": "doc_817e032986b1",
+       "fax_id": "fax_aa06846ef0e1",
+       "doc_type": "auth_approved",
+       "denial_reason": null,
+       "queue": "approved_filed",
+       "tentative_queue": "approved_filed",
+       "priority": "normal",
+       "needs_review": 0,
+       "review_reasons": [],
+       "extraction": {
+        "fields": {
+         "payer_name": {
+          "value": "Blue Heron Benefits (SAMPLE)",
+          "confidence": 1.0
+         },
+         "member_id": {
+          "value": "BHB99320415",
+          "confidence": 1.0
+         },
+         "auth_number": {
+          "value": "BH-5520817",
+          "confidence": 1.0
+         },
+         "service_code": {
+          "value": "97151",
+          "confidence": 1.0
+         },
+         "requested_units": {
+          "value": 16,
+          "confidence": 1.0
+         },
+         "approved_units": {
+          "value": 16,
+          "confidence": 1.0
+         },
+         "requested_start": {
+          "value": "2026-11-09",
+          "confidence": 1.0
+         },
+         "requested_end": {
+          "value": "2027-02-08",
+          "confidence": 1.0
+         },
+         "approved_start": {
+          "value": "2026-11-09",
+          "confidence": 1.0
+         },
+         "approved_end": {
+          "value": "2027-02-08",
+          "confidence": 1.0
+         },
+         "decision_text": {
+          "value": "Approved",
+          "confidence": 1.0
+         },
+         "denial_reason_text": {
+          "value": null,
+          "confidence": 1.0
+         },
+         "letter_date": {
+          "value": "2026-11-02",
+          "confidence": 1.0
+         },
+         "appeal_deadline": {
+          "value": null,
+          "confidence": 0.0
+         }
+        },
+        "doc_type_hint": null,
+        "backend": "replay+replay",
+        "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+        "page_count": 1,
+        "notes": "CPT/HCPCS field shows only partial characters that appear obscured or unclear. Requested Units and Approved Units fields also appear obscured or unclear in the document. No appeal deadline information is visible on this page.",
+        "disagreements": []
+       },
+       "rule_hits": [
+        {
+         "rule_id": "C-APP-01",
+         "detail": "Units and dates approved as requested."
+        },
+        {
+         "rule_id": "Q-APP-01",
+         "detail": "Approval: filed, no denial action."
+        }
+       ],
+       "state": "open",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "resolved_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "review_resolved",
+       "fax_id": "fax_aa06846ef0e1",
+       "doc_id": "doc_817e032986b1",
+       "actor": "reviewer.demo",
+       "detail": {
+        "doc_type": "auth_approved",
+        "fields_changed": [
+         "approved_end",
+         "approved_start",
+         "approved_units",
+         "auth_number",
+         "decision_text",
+         "letter_date",
+         "member_id",
+         "requested_end",
+         "requested_start",
+         "requested_units",
+         "service_code"
+        ],
+        "needs_review": false,
+        "queue": "approved_filed",
+        "rule_ids": [
+         "C-APP-01",
+         "Q-APP-01"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "doc_a4f20ab05f6c": {
+    "corrections": {
+     "member_id": "PMH61130742",
+     "auth_number": "PM-3390184",
+     "service_code": "97153",
+     "requested_units": 320,
+     "approved_units": 0,
+     "requested_start": "2026-11-01",
+     "requested_end": "2027-01-31",
+     "decision_text": "Denied",
+     "letter_date": "2026-11-05",
+     "appeal_deadline": "2027-01-04"
+    },
+    "patch": {
+     "documents": [
+      {
+       "doc_id": "doc_a4f20ab05f6c",
+       "fax_id": "fax_b7d8f1a9f1e3",
+       "doc_type": "full_denial",
+       "denial_reason": "eligibility",
+       "queue": "eligibility",
+       "tentative_queue": "eligibility",
+       "priority": "normal",
+       "needs_review": 0,
+       "review_reasons": [],
+       "extraction": {
+        "fields": {
+         "payer_name": {
+          "value": "Peachtree Mutual Health (SAMPLE)",
+          "confidence": 1.0
+         },
+         "member_id": {
+          "value": "PMH61130742",
+          "confidence": 1.0
+         },
+         "auth_number": {
+          "value": "PM-3390184",
+          "confidence": 1.0
+         },
+         "service_code": {
+          "value": "97153",
+          "confidence": 1.0
+         },
+         "requested_units": {
+          "value": 320,
+          "confidence": 1.0
+         },
+         "approved_units": {
+          "value": 0,
+          "confidence": 1.0
+         },
+         "requested_start": {
+          "value": "2026-11-01",
+          "confidence": 1.0
+         },
+         "requested_end": {
+          "value": "2027-01-31",
+          "confidence": 1.0
+         },
+         "approved_start": {
+          "value": null,
+          "confidence": 0.99
+         },
+         "approved_end": {
+          "value": null,
+          "confidence": 0.99
+         },
+         "decision_text": {
+          "value": "Denied",
+          "confidence": 1.0
+         },
+         "denial_reason_text": {
+          "value": "Member coverage was terminated effective 2026-09-30; the member is not eligible for the requested dates of service.",
+          "confidence": 1.0
+         },
+         "letter_date": {
+          "value": "2026-11-05",
+          "confidence": 1.0
+         },
+         "appeal_deadline": {
+          "value": "2027-01-04",
+          "confidence": 1.0
+         }
+        },
+        "doc_type_hint": null,
+        "backend": "replay+replay",
+        "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+        "page_count": 1,
+        "notes": "Clear, legible fax. All fields clearly printed. This is a synthetic sample document as noted at the bottom of the page.",
+        "disagreements": []
+       },
+       "rule_hits": [
+        {
+         "rule_id": "C-DEN-01",
+         "detail": "approved_units is 0: nothing approved, full denial."
+        },
+        {
+         "rule_id": "R-ELIGIBILITY",
+         "detail": "Reason text matches eligibility."
+        },
+        {
+         "rule_id": "Q-ELIGIBILITY",
+         "detail": "Routed to the eligibility queue."
+        }
+       ],
+       "state": "open",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "resolved_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "actions": [
+      {
+       "action_id": "act_b8d9112e60",
+       "doc_id": "doc_a4f20ab05f6c",
+       "kind": "verify_eligibility",
+       "draft": "Verify member eligibility with Peachtree Mutual Health (SAMPLE) for member PMH61130742 and update the registration record.",
+       "status": "pending_approval",
+       "approved_by": null,
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": null
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "review_resolved",
+       "fax_id": "fax_b7d8f1a9f1e3",
+       "doc_id": "doc_a4f20ab05f6c",
+       "actor": "reviewer.demo",
+       "detail": {
+        "doc_type": "full_denial",
+        "fields_changed": [
+         "appeal_deadline",
+         "approved_units",
+         "auth_number",
+         "decision_text",
+         "letter_date",
+         "member_id",
+         "requested_end",
+         "requested_start",
+         "requested_units",
+         "service_code"
+        ],
+        "needs_review": false,
+        "queue": "eligibility",
+        "rule_ids": [
+         "C-DEN-01",
+         "Q-ELIGIBILITY",
+         "R-ELIGIBILITY"
+        ]
+       }
+      },
+      {
+       "seq": 27,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_proposed",
+       "fax_id": null,
+       "doc_id": "doc_a4f20ab05f6c",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_b8d9112e60",
+        "action_kind": "verify_eligibility"
+       }
+      }
+     ]
+    }
+   },
+   "doc_7c66f5927f79": {
+    "corrections": {
+     "member_id": "BHB20817364",
+     "auth_number": "BH-6671902",
+     "service_code": "92507",
+     "requested_units": 24,
+     "approved_units": 0,
+     "requested_start": "2026-11-10",
+     "requested_end": "2027-01-31",
+     "decision_text": "Denied",
+     "letter_date": "2026-11-04",
+     "appeal_deadline": "2027-01-03"
+    },
+    "patch": {
+     "documents": [
+      {
+       "doc_id": "doc_7c66f5927f79",
+       "fax_id": "fax_ca8aaa6e649c",
+       "doc_type": "full_denial",
+       "denial_reason": "coding",
+       "queue": "coding",
+       "tentative_queue": "coding",
+       "priority": "normal",
+       "needs_review": 0,
+       "review_reasons": [],
+       "extraction": {
+        "fields": {
+         "payer_name": {
+          "value": "Blue Heron Benefits (SAMPLE)",
+          "confidence": 1.0
+         },
+         "member_id": {
+          "value": "BHB20817364",
+          "confidence": 1.0
+         },
+         "auth_number": {
+          "value": "BH-6671902",
+          "confidence": 1.0
+         },
+         "service_code": {
+          "value": "92507",
+          "confidence": 1.0
+         },
+         "requested_units": {
+          "value": 24,
+          "confidence": 1.0
+         },
+         "approved_units": {
+          "value": 0,
+          "confidence": 1.0
+         },
+         "requested_start": {
+          "value": "2026-11-10",
+          "confidence": 1.0
+         },
+         "requested_end": {
+          "value": "2027-01-31",
+          "confidence": 1.0
+         },
+         "approved_start": {
+          "value": null,
+          "confidence": 1.0
+         },
+         "approved_end": {
+          "value": null,
+          "confidence": 1.0
+         },
+         "decision_text": {
+          "value": "Denied",
+          "confidence": 1.0
+         },
+         "denial_reason_text": {
+          "value": "Invalid modifier submitted with procedure code 92507. Resubmit with the corrected code and modifier. The request was returned because of an error in how the service was submitted.",
+          "confidence": 1.0
+         },
+         "letter_date": {
+          "value": "2026-11-04",
+          "confidence": 1.0
+         },
+         "appeal_deadline": {
+          "value": "2027-01-03",
+          "confidence": 1.0
+         }
+        },
+        "doc_type_hint": null,
+        "backend": "replay+replay",
+        "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0|us.anthropic.claude-sonnet-4-6",
+        "page_count": 1,
+        "notes": "Clear fax quality. Document is marked as synthetic sample data. All fields are clearly legible.",
+        "disagreements": []
+       },
+       "rule_hits": [
+        {
+         "rule_id": "C-DEN-01",
+         "detail": "approved_units is 0: nothing approved, full denial."
+        },
+        {
+         "rule_id": "R-CODING",
+         "detail": "Reason text matches coding."
+        },
+        {
+         "rule_id": "Q-CODING",
+         "detail": "Routed to the coding queue."
+        }
+       ],
+       "state": "open",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "resolved_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "actions": [
+      {
+       "action_id": "act_96fea4c596",
+       "doc_id": "doc_7c66f5927f79",
+       "kind": "correct_and_resubmit",
+       "draft": "Review the service code and modifier on the request to Blue Heron Benefits (SAMPLE) (ref BH-6671902); correct and resubmit.",
+       "status": "pending_approval",
+       "approved_by": null,
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": null
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "review_resolved",
+       "fax_id": "fax_ca8aaa6e649c",
+       "doc_id": "doc_7c66f5927f79",
+       "actor": "reviewer.demo",
+       "detail": {
+        "doc_type": "full_denial",
+        "fields_changed": [
+         "appeal_deadline",
+         "approved_units",
+         "auth_number",
+         "decision_text",
+         "letter_date",
+         "member_id",
+         "requested_end",
+         "requested_start",
+         "requested_units",
+         "service_code"
+        ],
+        "needs_review": false,
+        "queue": "coding",
+        "rule_ids": [
+         "C-DEN-01",
+         "Q-CODING",
+         "R-CODING"
+        ]
+       }
+      },
+      {
+       "seq": 27,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_proposed",
+       "fax_id": null,
+       "doc_id": "doc_7c66f5927f79",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_96fea4c596",
+        "action_kind": "correct_and_resubmit"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "action": {
+   "act_a5f4002ecc": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_a5f4002ecc",
+       "doc_id": "doc_4dbfbdca670a",
+       "kind": "request_reauthorization",
+       "draft": "Start a new authorization request with Magnolia State Health Plan (SAMPLE); the prior authorization (ref AUTH-2026-20155) is expired.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 28,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_4dbfbdca670a",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_a5f4002ecc",
+        "action_kind": "request_reauthorization"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_a5f4002ecc",
+       "doc_id": "doc_4dbfbdca670a",
+       "kind": "request_reauthorization",
+       "draft": "Start a new authorization request with Magnolia State Health Plan (SAMPLE); the prior authorization (ref AUTH-2026-20155) is expired.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 29,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_4dbfbdca670a",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_a5f4002ecc",
+        "action_kind": "request_reauthorization",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_a5f4002ecc",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_a5f4002ecc",
+       "doc_id": "doc_4dbfbdca670a",
+       "kind": "request_reauthorization",
+       "draft": "Start a new authorization request with Magnolia State Health Plan (SAMPLE); the prior authorization (ref AUTH-2026-20155) is expired.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 28,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_4dbfbdca670a",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_a5f4002ecc",
+        "action_kind": "request_reauthorization"
+       }
+      }
+     ]
+    }
+   },
+   "act_b8d9112e60": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_b8d9112e60",
+       "doc_id": "doc_a4f20ab05f6c",
+       "kind": "verify_eligibility",
+       "draft": "Verify member eligibility with Peachtree Mutual Health (SAMPLE) for member PMH61130742 and update the registration record.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 28,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_a4f20ab05f6c",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_b8d9112e60",
+        "action_kind": "verify_eligibility"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_b8d9112e60",
+       "doc_id": "doc_a4f20ab05f6c",
+       "kind": "verify_eligibility",
+       "draft": "Verify member eligibility with Peachtree Mutual Health (SAMPLE) for member PMH61130742 and update the registration record.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 29,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_a4f20ab05f6c",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_b8d9112e60",
+        "action_kind": "verify_eligibility",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_b8d9112e60",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_b8d9112e60",
+       "doc_id": "doc_a4f20ab05f6c",
+       "kind": "verify_eligibility",
+       "draft": "Verify member eligibility with Peachtree Mutual Health (SAMPLE) for member PMH61130742 and update the registration record.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 28,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_a4f20ab05f6c",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_b8d9112e60",
+        "action_kind": "verify_eligibility"
+       }
+      }
+     ]
+    }
+   },
+   "act_96fea4c596": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_96fea4c596",
+       "doc_id": "doc_7c66f5927f79",
+       "kind": "correct_and_resubmit",
+       "draft": "Review the service code and modifier on the request to Blue Heron Benefits (SAMPLE) (ref BH-6671902); correct and resubmit.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 28,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_7c66f5927f79",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_96fea4c596",
+        "action_kind": "correct_and_resubmit"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_96fea4c596",
+       "doc_id": "doc_7c66f5927f79",
+       "kind": "correct_and_resubmit",
+       "draft": "Review the service code and modifier on the request to Blue Heron Benefits (SAMPLE) (ref BH-6671902); correct and resubmit.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 29,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_7c66f5927f79",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_96fea4c596",
+        "action_kind": "correct_and_resubmit",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_96fea4c596",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_96fea4c596",
+       "doc_id": "doc_7c66f5927f79",
+       "kind": "correct_and_resubmit",
+       "draft": "Review the service code and modifier on the request to Blue Heron Benefits (SAMPLE) (ref BH-6671902); correct and resubmit.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 28,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_7c66f5927f79",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_96fea4c596",
+        "action_kind": "correct_and_resubmit"
+       }
+      }
+     ]
+    }
+   },
+   "act_cf77d8da55": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_cf77d8da55",
+       "doc_id": "doc_c250c70ba51c",
+       "kind": "appeal_or_peer_review",
+       "draft": "Prepare an appeal or peer-to-peer request to Magnolia State Health Plan (SAMPLE) for auth/ref REF-2026-0091823. A clinician reviews before anything is sent.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_c250c70ba51c",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_cf77d8da55",
+        "action_kind": "appeal_or_peer_review"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_cf77d8da55",
+       "doc_id": "doc_c250c70ba51c",
+       "kind": "appeal_or_peer_review",
+       "draft": "Prepare an appeal or peer-to-peer request to Magnolia State Health Plan (SAMPLE) for auth/ref REF-2026-0091823. A clinician reviews before anything is sent.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 27,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_c250c70ba51c",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_cf77d8da55",
+        "action_kind": "appeal_or_peer_review",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_cf77d8da55",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_cf77d8da55",
+       "doc_id": "doc_c250c70ba51c",
+       "kind": "appeal_or_peer_review",
+       "draft": "Prepare an appeal or peer-to-peer request to Magnolia State Health Plan (SAMPLE) for auth/ref REF-2026-0091823. A clinician reviews before anything is sent.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_c250c70ba51c",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_cf77d8da55",
+        "action_kind": "appeal_or_peer_review"
+       }
+      }
+     ]
+    }
+   },
+   "act_a30fdff6aa": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_a30fdff6aa",
+       "doc_id": "doc_c5a5043d0599",
+       "kind": "send_records",
+       "draft": "Request the missing documentation from the clinical team, then send it to Summit Care Alliance (SAMPLE) for auth/ref SC-8841270.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_c5a5043d0599",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_a30fdff6aa",
+        "action_kind": "send_records"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_a30fdff6aa",
+       "doc_id": "doc_c5a5043d0599",
+       "kind": "send_records",
+       "draft": "Request the missing documentation from the clinical team, then send it to Summit Care Alliance (SAMPLE) for auth/ref SC-8841270.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 27,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_c5a5043d0599",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_a30fdff6aa",
+        "action_kind": "send_records",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_a30fdff6aa",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_a30fdff6aa",
+       "doc_id": "doc_c5a5043d0599",
+       "kind": "send_records",
+       "draft": "Request the missing documentation from the clinical team, then send it to Summit Care Alliance (SAMPLE) for auth/ref SC-8841270.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_c5a5043d0599",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_a30fdff6aa",
+        "action_kind": "send_records"
+       }
+      }
+     ]
+    }
+   },
+   "act_86b2df48c8": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_86b2df48c8",
+       "doc_id": "doc_74852b0f79a5",
+       "kind": "appeal_or_peer_review",
+       "draft": "Prepare an appeal or peer-to-peer request to Summit Care Alliance (SAMPLE) for auth/ref SC-AUTH-2026-3380. A clinician reviews before anything is sent.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_74852b0f79a5",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_86b2df48c8",
+        "action_kind": "appeal_or_peer_review"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_86b2df48c8",
+       "doc_id": "doc_74852b0f79a5",
+       "kind": "appeal_or_peer_review",
+       "draft": "Prepare an appeal or peer-to-peer request to Summit Care Alliance (SAMPLE) for auth/ref SC-AUTH-2026-3380. A clinician reviews before anything is sent.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 27,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_74852b0f79a5",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_86b2df48c8",
+        "action_kind": "appeal_or_peer_review",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_86b2df48c8",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_86b2df48c8",
+       "doc_id": "doc_74852b0f79a5",
+       "kind": "appeal_or_peer_review",
+       "draft": "Prepare an appeal or peer-to-peer request to Summit Care Alliance (SAMPLE) for auth/ref SC-AUTH-2026-3380. A clinician reviews before anything is sent.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_74852b0f79a5",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_86b2df48c8",
+        "action_kind": "appeal_or_peer_review"
+       }
+      }
+     ]
+    }
+   },
+   "act_e9ec9b6573": {
+    "approve": {
+     "actions": [
+      {
+       "action_id": "act_e9ec9b6573",
+       "doc_id": "doc_26ac575298c7",
+       "kind": "send_records",
+       "draft": "Request the missing documentation from the clinical team, then send it to Peachtree Mutual Health (SAMPLE) for auth/ref AUTH-2026-80391.",
+       "status": "approved",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_approved",
+       "fax_id": null,
+       "doc_id": "doc_26ac575298c7",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_e9ec9b6573",
+        "action_kind": "send_records"
+       }
+      }
+     ]
+    },
+    "dispatch": {
+     "actions": [
+      {
+       "action_id": "act_e9ec9b6573",
+       "doc_id": "doc_26ac575298c7",
+       "kind": "send_records",
+       "draft": "Request the missing documentation from the clinical team, then send it to Peachtree Mutual Health (SAMPLE) for auth/ref AUTH-2026-80391.",
+       "status": "dispatched",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 27,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_dispatched",
+       "fax_id": null,
+       "doc_id": "doc_26ac575298c7",
+       "actor": "system",
+       "detail": {
+        "action_id": "act_e9ec9b6573",
+        "action_kind": "send_records",
+        "outcome": "simulated"
+       }
+      }
+     ],
+     "outbox": [
+      {
+       "outbox_id": 1,
+       "action_id": "act_e9ec9b6573",
+       "channel": "simulated",
+       "created_at": "2026-11-08T01:56:28+00:00"
+      }
+     ]
+    },
+    "reject": {
+     "actions": [
+      {
+       "action_id": "act_e9ec9b6573",
+       "doc_id": "doc_26ac575298c7",
+       "kind": "send_records",
+       "draft": "Request the missing documentation from the clinical team, then send it to Peachtree Mutual Health (SAMPLE) for auth/ref AUTH-2026-80391.",
+       "status": "rejected",
+       "approved_by": "approver.demo",
+       "created_at": "2026-11-08T01:56:28+00:00",
+       "decided_at": "2026-11-08T01:56:28+00:00"
+      }
+     ],
+     "audit_log": [
+      {
+       "seq": 26,
+       "ts": "2026-11-08T01:56:28+00:00",
+       "event": "action_rejected",
+       "fax_id": null,
+       "doc_id": "doc_26ac575298c7",
+       "actor": "approver.demo",
+       "detail": {
+        "action_id": "act_e9ec9b6573",
+        "action_kind": "send_records"
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "readers": {
+  "01_approved_aba_assessment": {
+   "member_id": {
+    "haiku": "PMH48201937",
+    "sonnet": "PMH48201937"
+   },
+   "auth_number": {
+    "haiku": "AUTH-2026-77412",
+    "sonnet": "AUTH-2026-77412"
+   },
+   "service_code": {
+    "haiku": "97153",
+    "sonnet": "97153"
+   },
+   "requested_units": {
+    "haiku": 480,
+    "sonnet": 480
+   },
+   "approved_units": {
+    "haiku": 480,
+    "sonnet": 480
+   },
+   "requested_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "requested_end": {
+    "haiku": "2027-04-30",
+    "sonnet": "2027-04-30"
+   },
+   "approved_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "approved_end": {
+    "haiku": "2027-04-30",
+    "sonnet": "2027-04-30"
+   },
+   "letter_date": {
+    "haiku": "2026-10-28",
+    "sonnet": "2026-10-28"
+   },
+   "appeal_deadline": {
+    "haiku": null,
+    "sonnet": null
+   }
+  },
+  "02_approved_scanned_blurry": {
+   "member_id": {
+    "haiku": "BHB99320415",
+    "sonnet": "BHB99320415"
+   },
+   "auth_number": {
+    "haiku": "BH-5520817",
+    "sonnet": "BH-5520817"
+   },
+   "service_code": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "requested_units": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_units": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "requested_start": {
+    "haiku": "2026-11-09",
+    "sonnet": "2026-11-09"
+   },
+   "requested_end": {
+    "haiku": "2027-02-08",
+    "sonnet": "2027-02-08"
+   },
+   "approved_start": {
+    "haiku": "2026-11-09",
+    "sonnet": "2026-11-09"
+   },
+   "approved_end": {
+    "haiku": "2027-02-08",
+    "sonnet": "2027-02-08"
+   },
+   "letter_date": {
+    "haiku": "2026-11-02",
+    "sonnet": "2026-11-02"
+   },
+   "appeal_deadline": {
+    "haiku": null,
+    "sonnet": null
+   }
+  },
+  "03_denial_medical_necessity": {
+   "member_id": {
+    "haiku": "MSH30481226",
+    "sonnet": "MSH30481226"
+   },
+   "auth_number": {
+    "haiku": "REF-2026-0091823",
+    "sonnet": "REF-2026-0091823"
+   },
+   "service_code": {
+    "haiku": "97153",
+    "sonnet": "97153"
+   },
+   "requested_units": {
+    "haiku": 600,
+    "sonnet": 600
+   },
+   "approved_units": {
+    "haiku": 0,
+    "sonnet": 0
+   },
+   "requested_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "requested_end": {
+    "haiku": "2027-04-30",
+    "sonnet": "2027-04-30"
+   },
+   "approved_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "letter_date": {
+    "haiku": "2026-11-03",
+    "sonnet": "2026-11-03"
+   },
+   "appeal_deadline": {
+    "haiku": "2027-01-02",
+    "sonnet": "2027-01-02"
+   }
+  },
+  "04_denial_missing_documentation": {
+   "member_id": {
+    "haiku": "SCA71049388",
+    "sonnet": "SCA71049388"
+   },
+   "auth_number": {
+    "haiku": "SC-8841270",
+    "sonnet": "SC-8841270"
+   },
+   "service_code": {
+    "haiku": "92507",
+    "sonnet": "92507"
+   },
+   "requested_units": {
+    "haiku": 48,
+    "sonnet": 48
+   },
+   "approved_units": {
+    "haiku": 0,
+    "sonnet": 0
+   },
+   "requested_start": {
+    "haiku": "2026-11-15",
+    "sonnet": "2026-11-15"
+   },
+   "requested_end": {
+    "haiku": "2027-02-14",
+    "sonnet": "2027-02-14"
+   },
+   "approved_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "letter_date": {
+    "haiku": "2026-11-05",
+    "sonnet": "2026-11-05"
+   },
+   "appeal_deadline": {
+    "haiku": "2026-12-05",
+    "sonnet": "2026-12-05"
+   }
+  },
+  "05_denial_eligibility": {
+   "member_id": {
+    "haiku": "PMH6113074",
+    "sonnet": "PMH61130742"
+   },
+   "auth_number": {
+    "haiku": "PM-3390184",
+    "sonnet": "PM-3390184"
+   },
+   "service_code": {
+    "haiku": "97153",
+    "sonnet": "97153"
+   },
+   "requested_units": {
+    "haiku": 320,
+    "sonnet": 320
+   },
+   "approved_units": {
+    "haiku": 0,
+    "sonnet": 0
+   },
+   "requested_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "requested_end": {
+    "haiku": "2027-01-31",
+    "sonnet": "2027-01-31"
+   },
+   "approved_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "letter_date": {
+    "haiku": "2026-11-05",
+    "sonnet": "2026-11-05"
+   },
+   "appeal_deadline": {
+    "haiku": "2027-01-04",
+    "sonnet": "2027-01-04"
+   }
+  },
+  "06_denial_expired_auth": {
+   "member_id": {
+    "haiku": "MSH11928834",
+    "sonnet": "MSH11928834"
+   },
+   "auth_number": {
+    "haiku": "AUTH-2026-20155",
+    "sonnet": "AUTH-2026-20155"
+   },
+   "service_code": {
+    "haiku": "97155",
+    "sonnet": "97155"
+   },
+   "requested_units": {
+    "haiku": 80,
+    "sonnet": 80
+   },
+   "approved_units": {
+    "haiku": 0,
+    "sonnet": 0
+   },
+   "requested_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "requested_end": {
+    "haiku": "2026-12-31",
+    "sonnet": "2026-12-31"
+   },
+   "approved_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "letter_date": {
+    "haiku": "2026-11-02",
+    "sonnet": "2026-11-02"
+   },
+   "appeal_deadline": {
+    "haiku": "2026-12-17",
+    "sonnet": "2026-12-17"
+   }
+  },
+  "07_denial_coding_scanned": {
+   "member_id": {
+    "haiku": "BHB20617364",
+    "sonnet": "BHB20817364"
+   },
+   "auth_number": {
+    "haiku": "BH-6671902",
+    "sonnet": "BH-6671902"
+   },
+   "service_code": {
+    "haiku": "92507",
+    "sonnet": "92507"
+   },
+   "requested_units": {
+    "haiku": 24,
+    "sonnet": 24
+   },
+   "approved_units": {
+    "haiku": 0,
+    "sonnet": 0
+   },
+   "requested_start": {
+    "haiku": "2026-11-10",
+    "sonnet": "2026-11-10"
+   },
+   "requested_end": {
+    "haiku": "2027-01-31",
+    "sonnet": "2027-01-31"
+   },
+   "approved_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "letter_date": {
+    "haiku": "2026-11-04",
+    "sonnet": "2026-11-04"
+   },
+   "appeal_deadline": {
+    "haiku": "2027-01-03",
+    "sonnet": "2027-01-03"
+   }
+  },
+  "08_partial_units_medical_necessity": {
+   "member_id": {
+    "haiku": "SCA55208816",
+    "sonnet": "SCA55208816"
+   },
+   "auth_number": {
+    "haiku": "SC-AUTH-2026-3380",
+    "sonnet": "SC-AUTH-2026-3380"
+   },
+   "service_code": {
+    "haiku": "97153",
+    "sonnet": "97153"
+   },
+   "requested_units": {
+    "haiku": 600,
+    "sonnet": 600
+   },
+   "approved_units": {
+    "haiku": 360,
+    "sonnet": 360
+   },
+   "requested_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "requested_end": {
+    "haiku": "2027-04-30",
+    "sonnet": "2027-04-30"
+   },
+   "approved_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "approved_end": {
+    "haiku": "2027-04-30",
+    "sonnet": "2027-04-30"
+   },
+   "letter_date": {
+    "haiku": "2026-11-04",
+    "sonnet": "2026-11-04"
+   },
+   "appeal_deadline": {
+    "haiku": "2026-12-30",
+    "sonnet": "2026-12-30"
+   }
+  },
+  "09_partial_dates_missing_documentation": {
+   "member_id": {
+    "haiku": "PMH82776104",
+    "sonnet": "PMH82776104"
+   },
+   "auth_number": {
+    "haiku": "AUTH-2026-80391",
+    "sonnet": "AUTH-2026-80391"
+   },
+   "service_code": {
+    "haiku": "97153",
+    "sonnet": "97153"
+   },
+   "requested_units": {
+    "haiku": 480,
+    "sonnet": 480
+   },
+   "approved_units": {
+    "haiku": 480,
+    "sonnet": 480
+   },
+   "requested_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "requested_end": {
+    "haiku": "2027-04-30",
+    "sonnet": "2027-04-30"
+   },
+   "approved_start": {
+    "haiku": "2026-11-01",
+    "sonnet": "2026-11-01"
+   },
+   "approved_end": {
+    "haiku": "2027-01-15",
+    "sonnet": "2027-01-15"
+   },
+   "letter_date": {
+    "haiku": "2026-11-05",
+    "sonnet": "2026-11-05"
+   },
+   "appeal_deadline": {
+    "haiku": "2026-12-05",
+    "sonnet": "2026-12-05"
+   }
+  },
+  "10_not_a_payer_vendor_flyer": {
+   "member_id": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "auth_number": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "service_code": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "requested_units": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_units": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "requested_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "requested_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_start": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "approved_end": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "letter_date": {
+    "haiku": null,
+    "sonnet": null
+   },
+   "appeal_deadline": {
+    "haiku": null,
+    "sonnet": null
+   }
+  }
+ },
+ "truth": {
+  "01_approved_aba_assessment": {
+   "payer_name": "Peachtree Mutual Health (SAMPLE)",
+   "member_id": "PMH48201937",
+   "auth_number": "AUTH-2026-77412",
+   "service_code": "97153",
+   "requested_units": 480,
+   "approved_units": 480,
+   "requested_start": "2026-11-01",
+   "requested_end": "2027-04-30",
+   "approved_start": "2026-11-01",
+   "approved_end": "2027-04-30",
+   "decision_text": "Approved",
+   "denial_reason_text": null,
+   "letter_date": "2026-10-28",
+   "appeal_deadline": null
+  },
+  "02_approved_scanned_blurry": {
+   "payer_name": "Blue Heron Benefits (SAMPLE)",
+   "member_id": "BHB99320415",
+   "auth_number": "BH-5520817",
+   "service_code": "97151",
+   "requested_units": 16,
+   "approved_units": 16,
+   "requested_start": "2026-11-09",
+   "requested_end": "2027-02-08",
+   "approved_start": "2026-11-09",
+   "approved_end": "2027-02-08",
+   "decision_text": "Approved",
+   "denial_reason_text": null,
+   "letter_date": "2026-11-02",
+   "appeal_deadline": null
+  },
+  "03_denial_medical_necessity": {
+   "payer_name": "Magnolia State Health Plan (SAMPLE)",
+   "member_id": "MSH30481226",
+   "auth_number": "REF-2026-0091823",
+   "service_code": "97153",
+   "requested_units": 600,
+   "approved_units": 0,
+   "requested_start": "2026-11-01",
+   "requested_end": "2027-04-30",
+   "approved_start": null,
+   "approved_end": null,
+   "decision_text": "Denied",
+   "denial_reason_text": "The requested level of care does not meet medical necessity criteria for the service requested.",
+   "letter_date": "2026-11-03",
+   "appeal_deadline": "2027-01-02"
+  },
+  "04_denial_missing_documentation": {
+   "payer_name": "Summit Care Alliance (SAMPLE)",
+   "member_id": "SCA71049388",
+   "auth_number": "SC-8841270",
+   "service_code": "92507",
+   "requested_units": 48,
+   "approved_units": 0,
+   "requested_start": "2026-11-15",
+   "requested_end": "2027-02-14",
+   "approved_start": null,
+   "approved_end": null,
+   "decision_text": "Denied",
+   "denial_reason_text": "Authorization could not be completed: additional documentation was not received (current treatment plan and progress notes).",
+   "letter_date": "2026-11-05",
+   "appeal_deadline": "2026-12-05"
+  },
+  "05_denial_eligibility": {
+   "payer_name": "Peachtree Mutual Health (SAMPLE)",
+   "member_id": "PMH61130742",
+   "auth_number": "PM-3390184",
+   "service_code": "97153",
+   "requested_units": 320,
+   "approved_units": 0,
+   "requested_start": "2026-11-01",
+   "requested_end": "2027-01-31",
+   "approved_start": null,
+   "approved_end": null,
+   "decision_text": "Denied",
+   "denial_reason_text": "Member coverage was terminated effective 2026-09-30; the member is not eligible for the requested dates of service.",
+   "letter_date": "2026-11-05",
+   "appeal_deadline": "2027-01-04"
+  },
+  "06_denial_expired_auth": {
+   "payer_name": "Magnolia State Health Plan (SAMPLE)",
+   "member_id": "MSH11928834",
+   "auth_number": "AUTH-2026-20155",
+   "service_code": "97155",
+   "requested_units": 80,
+   "approved_units": 0,
+   "requested_start": "2026-11-01",
+   "requested_end": "2026-12-31",
+   "approved_start": null,
+   "approved_end": null,
+   "decision_text": "Denied",
+   "denial_reason_text": "The authorization period has ended. The requested dates of service are outside the authorized period (expired 2026-08-31).",
+   "letter_date": "2026-11-02",
+   "appeal_deadline": "2026-12-17"
+  },
+  "07_denial_coding_scanned": {
+   "payer_name": "Blue Heron Benefits (SAMPLE)",
+   "member_id": "BHB20817364",
+   "auth_number": "BH-6671902",
+   "service_code": "92507",
+   "requested_units": 24,
+   "approved_units": 0,
+   "requested_start": "2026-11-10",
+   "requested_end": "2027-01-31",
+   "approved_start": null,
+   "approved_end": null,
+   "decision_text": "Denied",
+   "denial_reason_text": "Invalid modifier submitted with procedure code 92507. Resubmit with the corrected code and modifier.",
+   "letter_date": "2026-11-04",
+   "appeal_deadline": "2027-01-03"
+  },
+  "08_partial_units_medical_necessity": {
+   "payer_name": "Summit Care Alliance (SAMPLE)",
+   "member_id": "SCA55208816",
+   "auth_number": "SC-AUTH-2026-3380",
+   "service_code": "97153",
+   "requested_units": 600,
+   "approved_units": 360,
+   "requested_start": "2026-11-01",
+   "requested_end": "2027-04-30",
+   "approved_start": "2026-11-01",
+   "approved_end": "2027-04-30",
+   "decision_text": "Approved in part",
+   "denial_reason_text": "Remaining units are not approved. The additional units do not meet medical necessity guidelines.",
+   "letter_date": "2026-11-04",
+   "appeal_deadline": "2026-12-30"
+  },
+  "09_partial_dates_missing_documentation": {
+   "payer_name": "Peachtree Mutual Health (SAMPLE)",
+   "member_id": "PMH82776104",
+   "auth_number": "AUTH-2026-80391",
+   "service_code": "97153",
+   "requested_units": 480,
+   "approved_units": 480,
+   "requested_start": "2026-11-01",
+   "requested_end": "2027-04-30",
+   "approved_start": "2026-11-01",
+   "approved_end": "2027-01-15",
+   "decision_text": "Approved in part",
+   "denial_reason_text": "Approval is limited to 75 days. Additional documentation is required to authorize the remaining period.",
+   "letter_date": "2026-11-05",
+   "appeal_deadline": "2026-12-05"
+  },
+  "10_not_a_payer_vendor_flyer": {
+   "payer_name": "Lakeshore Therapy Supply (SAMPLE)",
+   "member_id": null,
+   "auth_number": null,
+   "service_code": null,
+   "requested_units": null,
+   "approved_units": null,
+   "requested_start": null,
+   "requested_end": null,
+   "approved_start": null,
+   "approved_end": null,
+   "decision_text": null,
+   "denial_reason_text": null,
+   "letter_date": "2026-11-03",
+   "appeal_deadline": null
+  }
+ },
+ "rules": {
+  "V-FIELD-01": "A field value fails the shared format check (ID shape, code shape, range, date sanity).",
+  "V-CROSS-01": "Two fields contradict each other (approved above requested, end date before start date).",
+  "C-NPR-01": "No payer plus member/auth identifier and no decision wording: not a payer response.",
+  "C-NPR-02": "No decision wording and no unit counts: not a payer response.",
+  "C-NPR-03": "Payer-like letter with no usable decision evidence: not a payer response.",
+  "C-DEN-01": "Approved units are 0: full denial.",
+  "C-DEN-02": "Decision wording says denied and no approved units are stated: full denial.",
+  "C-PART-01": "Approved units are fewer than requested units: partial denial.",
+  "C-PART-02": "Approved dates cover less than the requested dates: partial denial.",
+  "C-APP-01": "Units and dates approved as requested: authorization approved.",
+  "C-APP-02": "Decision wording says approved with no unit counts: authorization approved.",
+  "C-CONFLICT-01": "The model's label disagrees with what the numbers say: human review.",
+  "C-CONFLICT-02": "The printed decision wording disagrees with the numbers: human review.",
+  "R-MISSING_DOCUMENTATION": "Reason text matches the missing documentation keywords.",
+  "R-MEDICAL_NECESSITY": "Reason text matches the medical necessity keywords.",
+  "R-ELIGIBILITY": "Reason text matches the eligibility keywords.",
+  "R-EXPIRED_AUTH": "Reason text matches the expired authorization keywords.",
+  "R-CODING": "Reason text matches the coding keywords.",
+  "R-MULTI-01": "Reason text matches more than one category: a person decides.",
+  "R-NONE-01": "A denial with no stated reason: human review.",
+  "R-NONE-02": "Reason text matches no category: human review.",
+  "G-MISSING-01": "A field required for this document type is missing.",
+  "G-CONF-01": "A required field is below the 0.80 confidence floor.",
+  "G-DISAGREE-01": "Two independent model readers disagree on a high-stakes field.",
+  "Q-APP-01": "Approvals are filed with no denial action.",
+  "Q-NPR-01": "Documents that are not payer responses are filed with no action.",
+  "Q-MISSING_DOCUMENTATION": "Route to the missing documentation queue.",
+  "Q-MEDICAL_NECESSITY": "Route to the medical necessity queue.",
+  "Q-ELIGIBILITY": "Route to the eligibility queue.",
+  "Q-EXPIRED_AUTH": "Route to the expired authorization queue.",
+  "Q-CODING": "Route to the coding queue.",
+  "Q-REVIEW-01": "Any failed check routes the document to human review with reasons attached.",
+  "P-DEADLINE-01": "Appeal window of 30 days or fewer from the letter date: high priority."
+ },
+ "field_specs": {
+  "payer_name": {
+   "kind": "text",
+   "description": "Name of the insurance plan or payer that sent the letter.",
+   "required_for": [
+    "auth_approved",
+    "full_denial",
+    "partial_denial"
+   ]
+  },
+  "member_id": {
+   "kind": "id",
+   "description": "Member or subscriber ID as printed on the letter.",
+   "required_for": [
+    "auth_approved",
+    "full_denial",
+    "partial_denial"
+   ]
+  },
+  "auth_number": {
+   "kind": "id",
+   "description": "Authorization number, or the payer's reference number if no authorization number is printed.",
+   "required_for": [
+    "auth_approved"
+   ]
+  },
+  "service_code": {
+   "kind": "code",
+   "description": "Service code (CPT or HCPCS), for example 97153.",
+   "required_for": []
+  },
+  "requested_units": {
+   "kind": "int",
+   "description": "Units the provider requested.",
+   "required_for": [
+    "partial_denial",
+    "full_denial"
+   ]
+  },
+  "approved_units": {
+   "kind": "int",
+   "description": "Units the payer approved. Use 0 when nothing was approved.",
+   "required_for": [
+    "auth_approved",
+    "partial_denial"
+   ]
+  },
+  "requested_start": {
+   "kind": "date",
+   "description": "Start of the requested service period.",
+   "required_for": []
+  },
+  "requested_end": {
+   "kind": "date",
+   "description": "End of the requested service period.",
+   "required_for": []
+  },
+  "approved_start": {
+   "kind": "date",
+   "description": "Start of the approved service period.",
+   "required_for": []
+  },
+  "approved_end": {
+   "kind": "date",
+   "description": "End of the approved service period.",
+   "required_for": []
+  },
+  "decision_text": {
+   "kind": "text",
+   "description": "The decision wording exactly as printed, for example 'Approved' or 'Denied' or 'Approved in part'.",
+   "required_for": [
+    "auth_approved",
+    "full_denial",
+    "partial_denial"
+   ]
+  },
+  "denial_reason_text": {
+   "kind": "text",
+   "description": "The payer's stated reason for the denial, copied as printed. Null if none.",
+   "required_for": [
+    "full_denial",
+    "partial_denial"
+   ]
+  },
+  "letter_date": {
+   "kind": "date",
+   "description": "Date printed on the letter.",
+   "required_for": []
+  },
+  "appeal_deadline": {
+   "kind": "date",
+   "description": "Last day to appeal, if the letter states one.",
+   "required_for": []
+  }
+ }
+}

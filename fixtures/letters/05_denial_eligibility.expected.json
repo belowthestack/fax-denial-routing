@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "full_denial",
+  "queue": "eligibility",
+  "reason": "eligibility",
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Peachtree Mutual Health (SAMPLE)",
+    "member_id": "PMH61130742",
+    "auth_number": "PM-3390184",
+    "service_code": "97153",
+    "requested_units": 320,
+    "approved_units": 0,
+    "requested_start": "2026-11-01",
+    "requested_end": "2027-01-31",
+    "approved_start": null,
+    "approved_end": null,
+    "decision_text": "Denied",
+    "denial_reason_text": "Member coverage was terminated effective 2026-09-30; the member is not eligible for the requested dates of service.",
+    "letter_date": "2026-11-05",
+    "appeal_deadline": "2027-01-04"
+  }
+}

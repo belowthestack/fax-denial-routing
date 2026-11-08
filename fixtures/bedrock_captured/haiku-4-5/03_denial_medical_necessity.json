@@ -1,0 +1,74 @@
+{
+  "fixture": "03_denial_medical_necessity",
+  "content_sha256": "f5e68ccb9c59683c4ec2feba9af4a416c0b30aa8e148144bc06e87433a978b35",
+  "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "captured_at": "2026-11-08T01:48:53+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3961,
+    "outputTokens": 549,
+    "totalTokens": 4510
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Magnolia State Health Plan (SAMPLE)",
+        "confidence": 0.99
+      },
+      "member_id": {
+        "value": "MSH30481226",
+        "confidence": 0.99
+      },
+      "auth_number": {
+        "value": "REF-2026-0091823",
+        "confidence": 0.99
+      },
+      "service_code": {
+        "value": "97153",
+        "confidence": 0.99
+      },
+      "requested_units": {
+        "value": "600",
+        "confidence": 0.99
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 0.99
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 0.99
+      },
+      "requested_end": {
+        "value": "2027-04-30",
+        "confidence": 0.99
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 0.99
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 0.99
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 0.99
+      },
+      "denial_reason_text": {
+        "value": "The requested level of care does not meet medical necessity criteria for the service requested.",
+        "confidence": 0.99
+      },
+      "letter_date": {
+        "value": "2026-11-03",
+        "confidence": 0.99
+      },
+      "appeal_deadline": {
+        "value": "2027-01-02",
+        "confidence": 0.99
+      }
+    },
+    "notes": "Clean, legible fax. This is a synthetic sample document as noted at the bottom of the page. All fields clearly printed and easily readable."
+  }
+}

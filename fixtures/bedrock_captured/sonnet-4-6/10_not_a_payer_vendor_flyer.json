@@ -1,0 +1,74 @@
+{
+  "fixture": "10_not_a_payer_vendor_flyer",
+  "content_sha256": "ed1111102c7ee28db460a34a113d96632f89c7d3be9372265259b64289c32bcd",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "captured_at": "2026-11-08T01:51:22+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3962,
+    "outputTokens": 399,
+    "totalTokens": 4361
+  },
+  "tool_input": {
+    "doc_type": "not_payer_response",
+    "fields": {
+      "payer_name": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "member_id": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "auth_number": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "service_code": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "requested_units": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "approved_units": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "requested_start": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "requested_end": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "decision_text": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "denial_reason_text": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "letter_date": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "appeal_deadline": {
+        "value": null,
+        "confidence": 0.0
+      }
+    },
+    "notes": "This fax is a promotional/marketing advertisement from a therapy equipment supplier (Lakeshore Therapy Supply), not a payer authorization decision letter. No authorization-related fields are present anywhere in the document."
+  }
+}

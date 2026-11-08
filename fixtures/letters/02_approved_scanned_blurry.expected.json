@@ -1,0 +1,23 @@
+{
+  "scanned": true,
+  "doc_type": "auth_approved",
+  "queue": "approved_filed",
+  "reason": null,
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Blue Heron Benefits (SAMPLE)",
+    "member_id": "BHB99320415",
+    "auth_number": "BH-5520817",
+    "service_code": "97151",
+    "requested_units": 16,
+    "approved_units": 16,
+    "requested_start": "2026-11-09",
+    "requested_end": "2027-02-08",
+    "approved_start": "2026-11-09",
+    "approved_end": "2027-02-08",
+    "decision_text": "Approved",
+    "denial_reason_text": null,
+    "letter_date": "2026-11-02",
+    "appeal_deadline": null
+  }
+}

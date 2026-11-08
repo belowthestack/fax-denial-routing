@@ -1,0 +1,74 @@
+{
+  "fixture": "05_denial_eligibility",
+  "content_sha256": "db474b79ce4577e944f3f968ebcdd964ac504d26198384a0be8e0603f56712be",
+  "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "captured_at": "2026-11-08T01:48:59+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3961,
+    "outputTokens": 552,
+    "totalTokens": 4513
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Peachtree Mutual Health (SAMPLE)",
+        "confidence": 0.99
+      },
+      "member_id": {
+        "value": "PMH6113074",
+        "confidence": 0.99
+      },
+      "auth_number": {
+        "value": "PM-3390184",
+        "confidence": 0.99
+      },
+      "service_code": {
+        "value": "97153",
+        "confidence": 0.99
+      },
+      "requested_units": {
+        "value": "320",
+        "confidence": 0.99
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 0.99
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 0.99
+      },
+      "requested_end": {
+        "value": "2027-01-31",
+        "confidence": 0.99
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 0.99
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 0.99
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 0.99
+      },
+      "denial_reason_text": {
+        "value": "Member coverage was terminated effective 2026-09-30; the member is not eligible for the requested dates of service.",
+        "confidence": 0.99
+      },
+      "letter_date": {
+        "value": "2026-11-05",
+        "confidence": 0.99
+      },
+      "appeal_deadline": {
+        "value": "2027-01-04",
+        "confidence": 0.99
+      }
+    },
+    "notes": "Clear, legible fax. All fields clearly printed. This is a synthetic sample document as noted at the bottom of the page."
+  }
+}

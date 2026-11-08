@@ -1,0 +1,74 @@
+{
+  "fixture": "07_denial_coding_scanned",
+  "content_sha256": "ef10eb575f875a6e79083845d5e831c32f1ebf870b228cfd411012a5fb13947f",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "captured_at": "2026-11-08T01:51:09+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3962,
+    "outputTokens": 489,
+    "totalTokens": 4451
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Blue Heron Benefits (SAMPLE)",
+        "confidence": 0.99
+      },
+      "member_id": {
+        "value": "BHB20817364",
+        "confidence": 0.99
+      },
+      "auth_number": {
+        "value": "BH-6671902",
+        "confidence": 0.99
+      },
+      "service_code": {
+        "value": "92507",
+        "confidence": 0.99
+      },
+      "requested_units": {
+        "value": "24",
+        "confidence": 0.99
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 0.99
+      },
+      "requested_start": {
+        "value": "2026-11-10",
+        "confidence": 0.99
+      },
+      "requested_end": {
+        "value": "2027-01-31",
+        "confidence": 0.99
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 0.0
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 0.99
+      },
+      "denial_reason_text": {
+        "value": "Invalid modifier submitted with procedure code 92507. Resubmit with the corrected code and modifier.",
+        "confidence": 0.99
+      },
+      "letter_date": {
+        "value": "2026-11-04",
+        "confidence": 0.99
+      },
+      "appeal_deadline": {
+        "value": "2027-01-03",
+        "confidence": 0.99
+      }
+    },
+    "notes": "Single-page fax, clean scan, all fields clearly legible. Document is explicitly marked as a synthetic sample. No approved service period dates are printed, as the request was fully denied. The reference number (BH-6671902) is used as the auth number since no separate authorization number is present."
+  }
+}

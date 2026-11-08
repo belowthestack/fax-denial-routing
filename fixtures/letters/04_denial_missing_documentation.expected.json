@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "full_denial",
+  "queue": "missing_documentation",
+  "reason": "missing_documentation",
+  "priority": "high",
+  "fields": {
+    "payer_name": "Summit Care Alliance (SAMPLE)",
+    "member_id": "SCA71049388",
+    "auth_number": "SC-8841270",
+    "service_code": "92507",
+    "requested_units": 48,
+    "approved_units": 0,
+    "requested_start": "2026-11-15",
+    "requested_end": "2027-02-14",
+    "approved_start": null,
+    "approved_end": null,
+    "decision_text": "Denied",
+    "denial_reason_text": "Authorization could not be completed: additional documentation was not received (current treatment plan and progress notes).",
+    "letter_date": "2026-11-05",
+    "appeal_deadline": "2026-12-05"
+  }
+}

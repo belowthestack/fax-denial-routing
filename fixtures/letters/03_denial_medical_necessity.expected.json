@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "full_denial",
+  "queue": "medical_necessity",
+  "reason": "medical_necessity",
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Magnolia State Health Plan (SAMPLE)",
+    "member_id": "MSH30481226",
+    "auth_number": "REF-2026-0091823",
+    "service_code": "97153",
+    "requested_units": 600,
+    "approved_units": 0,
+    "requested_start": "2026-11-01",
+    "requested_end": "2027-04-30",
+    "approved_start": null,
+    "approved_end": null,
+    "decision_text": "Denied",
+    "denial_reason_text": "The requested level of care does not meet medical necessity criteria for the service requested.",
+    "letter_date": "2026-11-03",
+    "appeal_deadline": "2027-01-02"
+  }
+}

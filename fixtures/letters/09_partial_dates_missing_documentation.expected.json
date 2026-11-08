@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "partial_denial",
+  "queue": "missing_documentation",
+  "reason": "missing_documentation",
+  "priority": "high",
+  "fields": {
+    "payer_name": "Peachtree Mutual Health (SAMPLE)",
+    "member_id": "PMH82776104",
+    "auth_number": "AUTH-2026-80391",
+    "service_code": "97153",
+    "requested_units": 480,
+    "approved_units": 480,
+    "requested_start": "2026-11-01",
+    "requested_end": "2027-04-30",
+    "approved_start": "2026-11-01",
+    "approved_end": "2027-01-15",
+    "decision_text": "Approved in part",
+    "denial_reason_text": "Approval is limited to 75 days. Additional documentation is required to authorize the remaining period.",
+    "letter_date": "2026-11-05",
+    "appeal_deadline": "2026-12-05"
+  }
+}

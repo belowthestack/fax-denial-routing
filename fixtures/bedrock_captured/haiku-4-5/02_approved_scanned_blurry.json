@@ -1,0 +1,74 @@
+{
+  "fixture": "02_approved_scanned_blurry",
+  "content_sha256": "2fdba590633149f8cbc0c1f1ae2adfd09b689bbec10056c5fb01212edb9d9823",
+  "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "captured_at": "2026-11-08T01:48:50+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3961,
+    "outputTokens": 551,
+    "totalTokens": 4512
+  },
+  "tool_input": {
+    "doc_type": "auth_approved",
+    "fields": {
+      "payer_name": {
+        "value": "Blue Heron Benefits (SAMPLE)",
+        "confidence": 0.95
+      },
+      "member_id": {
+        "value": "BHB99320415",
+        "confidence": 0.95
+      },
+      "auth_number": {
+        "value": "BH-5520817",
+        "confidence": 0.95
+      },
+      "service_code": {
+        "value": null,
+        "confidence": 0.3
+      },
+      "requested_units": {
+        "value": null,
+        "confidence": 0.2
+      },
+      "approved_units": {
+        "value": null,
+        "confidence": 0.2
+      },
+      "requested_start": {
+        "value": "2026-11-09",
+        "confidence": 0.95
+      },
+      "requested_end": {
+        "value": "2027-02-08",
+        "confidence": 0.95
+      },
+      "approved_start": {
+        "value": "2026-11-09",
+        "confidence": 0.95
+      },
+      "approved_end": {
+        "value": "2027-02-08",
+        "confidence": 0.95
+      },
+      "decision_text": {
+        "value": "Approved",
+        "confidence": 0.95
+      },
+      "denial_reason_text": {
+        "value": null,
+        "confidence": 1.0
+      },
+      "letter_date": {
+        "value": "2026-11-02",
+        "confidence": 0.95
+      },
+      "appeal_deadline": {
+        "value": null,
+        "confidence": 0.0
+      }
+    },
+    "notes": "CPT/HCPCS field shows only partial characters that appear obscured or unclear. Requested Units and Approved Units fields also appear obscured or unclear in the document. No appeal deadline information is visible on this page."
+  }
+}

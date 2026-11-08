@@ -1,0 +1,74 @@
+{
+  "fixture": "03_denial_medical_necessity",
+  "content_sha256": "f5e68ccb9c59683c4ec2feba9af4a416c0b30aa8e148144bc06e87433a978b35",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "captured_at": "2026-11-08T01:50:49+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3962,
+    "outputTokens": 474,
+    "totalTokens": 4436
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Magnolia State Health Plan (SAMPLE)",
+        "confidence": 1.0
+      },
+      "member_id": {
+        "value": "MSH30481226",
+        "confidence": 1.0
+      },
+      "auth_number": {
+        "value": "REF-2026-0091823",
+        "confidence": 1.0
+      },
+      "service_code": {
+        "value": "97153",
+        "confidence": 1.0
+      },
+      "requested_units": {
+        "value": "600",
+        "confidence": 1.0
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 1.0
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 1.0
+      },
+      "requested_end": {
+        "value": "2027-04-30",
+        "confidence": 1.0
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 1.0
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 1.0
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 1.0
+      },
+      "denial_reason_text": {
+        "value": "The requested level of care does not meet medical necessity criteria for the service requested.",
+        "confidence": 1.0
+      },
+      "letter_date": {
+        "value": "2026-11-03",
+        "confidence": 1.0
+      },
+      "appeal_deadline": {
+        "value": "2027-01-02",
+        "confidence": 1.0
+      }
+    },
+    "notes": "Clean, high-quality fax scan. Document is clearly labeled as a synthetic sample. No auth number printed; reference number REF-2026-0091823 used in its place. No approved service period dates present, as zero units were approved."
+  }
+}

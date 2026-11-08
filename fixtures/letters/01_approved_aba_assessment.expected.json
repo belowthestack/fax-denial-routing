@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "auth_approved",
+  "queue": "approved_filed",
+  "reason": null,
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Peachtree Mutual Health (SAMPLE)",
+    "member_id": "PMH48201937",
+    "auth_number": "AUTH-2026-77412",
+    "service_code": "97153",
+    "requested_units": 480,
+    "approved_units": 480,
+    "requested_start": "2026-11-01",
+    "requested_end": "2027-04-30",
+    "approved_start": "2026-11-01",
+    "approved_end": "2027-04-30",
+    "decision_text": "Approved",
+    "denial_reason_text": null,
+    "letter_date": "2026-10-28",
+    "appeal_deadline": null
+  }
+}

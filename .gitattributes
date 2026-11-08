@@ -1,0 +1,5 @@
+*.pdf binary
+*.png binary
+fixtures/bedrock_captured/** -text
+fixtures/letters/*.json -text
+* text=auto eol=lf

@@ -1,0 +1,77 @@
+{
+  "name": "[lab-ops-command-center] WF-2 Dead Letter Alert",
+  "nodes": [
+    {
+      "name": "Dead letter alert from service",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        300
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fax-denial-alert",
+        "authentication": "none",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "name": "Format alert",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const text = String(($input.first().json.body || {}).text || 'unknown alert').slice(0, 300);\nreturn [{ json: { text: 'Fax intake needs attention: ' + text + ' Open the dead letter queue in the dashboard and retry once the cause is fixed.' } }];"
+      }
+    },
+    {
+      "name": "Post to team chat (placeholder)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        800,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://YOUR-CHAT-WEBHOOK-URL",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.text }) }}"
+      }
+    }
+  ],
+  "connections": {
+    "Dead letter alert from service": {
+      "main": [
+        [
+          {
+            "node": "Format alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format alert": {
+      "main": [
+        [
+          {
+            "node": "Post to team chat (placeholder)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

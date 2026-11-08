@@ -1,0 +1,74 @@
+{
+  "fixture": "01_approved_aba_assessment",
+  "content_sha256": "55739255b690a58438e743b0340def82ff95c6dcd4b152c32bc9a7ad823830cc",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "captured_at": "2026-11-08T01:50:40+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3962,
+    "outputTokens": 441,
+    "totalTokens": 4403
+  },
+  "tool_input": {
+    "doc_type": "auth_approved",
+    "fields": {
+      "payer_name": {
+        "value": "Peachtree Mutual Health (SAMPLE)",
+        "confidence": 1.0
+      },
+      "member_id": {
+        "value": "PMH48201937",
+        "confidence": 1.0
+      },
+      "auth_number": {
+        "value": "AUTH-2026-77412",
+        "confidence": 1.0
+      },
+      "service_code": {
+        "value": "97153",
+        "confidence": 1.0
+      },
+      "requested_units": {
+        "value": "480",
+        "confidence": 1.0
+      },
+      "approved_units": {
+        "value": "480",
+        "confidence": 1.0
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 1.0
+      },
+      "requested_end": {
+        "value": "2027-04-30",
+        "confidence": 1.0
+      },
+      "approved_start": {
+        "value": "2026-11-01",
+        "confidence": 1.0
+      },
+      "approved_end": {
+        "value": "2027-04-30",
+        "confidence": 1.0
+      },
+      "decision_text": {
+        "value": "Approved",
+        "confidence": 1.0
+      },
+      "denial_reason_text": {
+        "value": null,
+        "confidence": 1.0
+      },
+      "letter_date": {
+        "value": "2026-10-28",
+        "confidence": 1.0
+      },
+      "appeal_deadline": {
+        "value": null,
+        "confidence": 1.0
+      }
+    },
+    "notes": "Clean, high-quality fax scan. All fields are clearly legible. No appeal deadline printed. Document is explicitly labeled as a synthetic sample."
+  }
+}

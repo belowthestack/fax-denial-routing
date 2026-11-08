@@ -1,0 +1,23 @@
+{
+  "scanned": false,
+  "doc_type": "partial_denial",
+  "queue": "medical_necessity",
+  "reason": "medical_necessity",
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Summit Care Alliance (SAMPLE)",
+    "member_id": "SCA55208816",
+    "auth_number": "SC-AUTH-2026-3380",
+    "service_code": "97153",
+    "requested_units": 600,
+    "approved_units": 360,
+    "requested_start": "2026-11-01",
+    "requested_end": "2027-04-30",
+    "approved_start": "2026-11-01",
+    "approved_end": "2027-04-30",
+    "decision_text": "Approved in part",
+    "denial_reason_text": "Remaining units are not approved. The additional units do not meet medical necessity guidelines.",
+    "letter_date": "2026-11-04",
+    "appeal_deadline": "2026-12-30"
+  }
+}

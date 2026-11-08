@@ -1,0 +1,74 @@
+{
+  "fixture": "06_denial_expired_auth",
+  "content_sha256": "40b061dc431074b416cf2b2564f96e3868c185855653c42958f15de97ebaa6f2",
+  "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "captured_at": "2026-11-08T01:49:02+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3961,
+    "outputTokens": 550,
+    "totalTokens": 4511
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Magnolia State Health Plan (SAMPLE)",
+        "confidence": 0.95
+      },
+      "member_id": {
+        "value": "MSH11928834",
+        "confidence": 0.95
+      },
+      "auth_number": {
+        "value": "AUTH-2026-20155",
+        "confidence": 0.95
+      },
+      "service_code": {
+        "value": "97155",
+        "confidence": 0.95
+      },
+      "requested_units": {
+        "value": "80",
+        "confidence": 0.95
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 0.95
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 0.95
+      },
+      "requested_end": {
+        "value": "2026-12-31",
+        "confidence": 0.95
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 0.95
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 0.95
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 0.95
+      },
+      "denial_reason_text": {
+        "value": "The authorization period has ended. The requested dates of service are outside the authorized period (expired 2026-08-31).",
+        "confidence": 0.95
+      },
+      "letter_date": {
+        "value": "2026-11-02",
+        "confidence": 0.95
+      },
+      "appeal_deadline": {
+        "value": "2026-12-17",
+        "confidence": 0.95
+      }
+    },
+    "notes": "Clean fax with clear formatting. This is a synthetic sample document as noted at the bottom of the page."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "fixture": "05_denial_eligibility",
+  "content_sha256": "db474b79ce4577e944f3f968ebcdd964ac504d26198384a0be8e0603f56712be",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "captured_at": "2026-11-08T01:50:59+00:00",
+  "page_count": 1,
+  "usage": {
+    "inputTokens": 3962,
+    "outputTokens": 486,
+    "totalTokens": 4448
+  },
+  "tool_input": {
+    "doc_type": "full_denial",
+    "fields": {
+      "payer_name": {
+        "value": "Peachtree Mutual Health (SAMPLE)",
+        "confidence": 1.0
+      },
+      "member_id": {
+        "value": "PMH61130742",
+        "confidence": 1.0
+      },
+      "auth_number": {
+        "value": "PM-3390184",
+        "confidence": 1.0
+      },
+      "service_code": {
+        "value": "97153",
+        "confidence": 1.0
+      },
+      "requested_units": {
+        "value": "320",
+        "confidence": 1.0
+      },
+      "approved_units": {
+        "value": "0",
+        "confidence": 1.0
+      },
+      "requested_start": {
+        "value": "2026-11-01",
+        "confidence": 1.0
+      },
+      "requested_end": {
+        "value": "2027-01-31",
+        "confidence": 1.0
+      },
+      "approved_start": {
+        "value": null,
+        "confidence": 1.0
+      },
+      "approved_end": {
+        "value": null,
+        "confidence": 1.0
+      },
+      "decision_text": {
+        "value": "Denied",
+        "confidence": 1.0
+      },
+      "denial_reason_text": {
+        "value": "Member coverage was terminated effective 2026-09-30; the member is not eligible for the requested dates of service.",
+        "confidence": 1.0
+      },
+      "letter_date": {
+        "value": "2026-11-05",
+        "confidence": 1.0
+      },
+      "appeal_deadline": {
+        "value": "2027-01-04",
+        "confidence": 1.0
+      }
+    },
+    "notes": "Clean, single-page fax. No smudging or scan quality issues. Document is labeled as synthetic/sample data. No authorization number printed; reference number PM-3390184 used in its place. Approved start and end dates are absent as the request was fully denied."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "scanned": true,
+  "doc_type": "full_denial",
+  "queue": "coding",
+  "reason": "coding",
+  "priority": "normal",
+  "fields": {
+    "payer_name": "Blue Heron Benefits (SAMPLE)",
+    "member_id": "BHB20817364",
+    "auth_number": "BH-6671902",
+    "service_code": "92507",
+    "requested_units": 24,
+    "approved_units": 0,
+    "requested_start": "2026-11-10",
+    "requested_end": "2027-01-31",
+    "approved_start": null,
+    "approved_end": null,
+    "decision_text": "Denied",
+    "denial_reason_text": "Invalid modifier submitted with procedure code 92507. Resubmit with the corrected code and modifier.",
+    "letter_date": "2026-11-04",
+    "appeal_deadline": "2027-01-03"
+  }
+}
