@@ -4,7 +4,7 @@ Incoming payer faxes in, routed work out. This reads a faxed insurance letter, d
 
 **Status: a pilot on synthetic data.** Every payer, member and number in this repo is invented. It has never touched a real patient or a real clinic.
 
-**Live dashboard:** https://belowthestack.github.io/fax-denial-routing/ (pre-computed from a real pass over the 10 synthetic letters, labeled "Synthetic data" on every screen)
+**Live dashboard:** https://fax-denial-routing.pages.dev/ (mirror: https://belowthestack.github.io/fax-denial-routing/; pre-computed from a real pass over the 10 synthetic letters, labeled "Synthetic data" on every screen)
 
 ## What it does
 
