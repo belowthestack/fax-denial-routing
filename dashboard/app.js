@@ -81,17 +81,17 @@ function viewIncoming() {
     <div class="stat"><div class="eyebrow">Received</div><div class="v">${faxes.length}</div></div>
     <div class="stat"><div class="eyebrow">Routed</div><div class="v">${routed}</div></div>
     <div class="stat"><div class="eyebrow">In review</div><div class="v ${inReview ? "warn" : ""}">${inReview}</div></div>
-    <div class="stat"><div class="eyebrow">Dead letter</div><div class="v ${dl.length ? "warn" : ""}">${dl.length}</div></div>
+    <div class="stat"><div class="eyebrow">Dead letter</div><div class="v ${dl.length ? "fail" : ""}">${dl.length}</div></div>
     <div class="stat"><div class="eyebrow">Duplicates suppressed</div><div class="v">${dups}</div></div>
   </div>
   ${dlHtml}
   <div class="panel"><table><thead><tr><th>Arrived</th><th>Source file</th><th>Pages</th><th>Result</th><th>Routed to</th><th>Deciding rules</th><th></th></tr></thead><tbody>
   ${faxes.map((f) => {
     const d = docs().find((x) => x.fax_id === f.fax_id);
-    const result = f.status === "dead_letter" ? `<span class="chip warn">Dead letter</span>` : d ? `<span class="chip solid">${LABELS.doc[d.doc_type]}</span>` : "";
-    const where = d ? `<span class="chip ${d.needs_review ? "warn" : "ok"}">${q(d.queue)}</span>${d.priority === "high" ? '<span class="chip warn">High priority</span>' : ""}` : '<span class="dim">Held</span>';
+    const result = f.status === "dead_letter" ? `<span class="chip fail">Dead letter</span>` : d ? `<span class="chip solid">${LABELS.doc[d.doc_type]}</span>` : "";
+    const where = d ? `<span class="chip ${d.needs_review ? "warn" : "ok q-" + d.queue}">${q(d.queue)}</span>${d.priority === "high" ? '<span class="chip warn">High priority</span>' : ""}` : '<span class="dim">Held</span>';
     return `<tr class="${d ? "click" : ""}" ${d ? `data-doc="${d.doc_id}"` : ""}>
-      <td class="mono dim">${time(f.received_at)}</td><td class="mono">${esc(f.fixture)}.pdf</td><td class="mono">${f.page_count ?? "-"}</td>
+      <td class="mono dim">${time(f.received_at)}</td><td class="mono">${esc(f.fixture).replace(/_/g, "_<wbr>")}.pdf</td><td class="mono">${f.page_count ?? "-"}</td>
       <td>${result}</td><td>${where}</td><td>${d ? ruleChips(d.rule_hits, ["C-", "Q-"]) : ""}</td>
       <td class="right"><button class="btn ghost sm" data-resend="${f.fax_id}">Send again</button></td></tr>`;
   }).join("")}
@@ -108,7 +108,7 @@ function viewReview() {
   ${list.map((d) => `<tr class="click" data-doc="${d.doc_id}"><td class="mono">${esc(faxOf(d).fixture)}.pdf</td>
     <td>${d.tentative_queue ? `<span class="chip">${q(d.tentative_queue)}</span>` : '<span class="dim">undecided</span>'}</td>
     <td>${d.review_reasons.map((r) => `<span class="chip warn">${esc(r)}</span>`).join("")}</td>
-    <td class="right"><button class="btn sm">Open</button></td></tr>`).join("")}
+    <td class="right"><button class="btn ghost sm">Open</button></td></tr>`).join("")}
   </tbody></table></div>` : `<div class="panel"><div class="panel-b dim">Review queue is empty. Use "Reset demo" in the sidebar to start over.</div></div>`}`;
 }
 
@@ -125,7 +125,7 @@ function card(d) {
 function viewBoard() {
   const cols = BOARD.map((k) => {
     const list = docs().filter((d) => d.queue === k);
-    return `<section class="col"><div class="col-h"><span class="t">${q(k)}</span><span class="mono dim">${list.length}</span></div>
+    return `<section class="col" data-reason="${k}"><div class="col-h"><span class="t">${q(k)}</span><span class="mono dim">${list.length}</span></div>
       <div class="col-b">${list.map(card).join("") || '<div class="empty">Nothing here</div>'}</div></section>`;
   }).join("");
   const filed = docs().filter((d) => d.queue === "approved_filed");
@@ -169,7 +169,7 @@ function viewDoc(id) {
   const events = Object.values(S.audit_log).filter((a) => a.doc_id === id || a.fax_id === d.fax_id).sort((a, b) => a.seq - b.seq);
   return `<a class="back" href="#/${d.needs_review ? "review" : "board"}">&larr; Back</a>
   <div class="head" style="margin-top:12px"><div class="eyebrow">Document</div><h1>${esc(pretty(fx))}</h1>
-    <div><span class="chip solid">${LABELS.doc[d.doc_type]}</span><span class="chip ${d.needs_review ? "warn" : "ok"}">${q(d.queue)}</span>${d.priority === "high" ? '<span class="chip warn">High priority: appeal window 30 days or fewer</span>' : ""}${d.denial_reason ? `<span class="chip">reason: ${esc(d.denial_reason)}</span>` : ""}</div></div>
+    <div><span class="chip solid">${LABELS.doc[d.doc_type]}</span><span class="chip ${d.needs_review ? "warn" : "ok q-" + d.queue}">${q(d.queue)}</span>${d.priority === "high" ? '<span class="chip warn">High priority: appeal window 30 days or fewer</span>' : ""}${d.denial_reason ? `<span class="chip">reason: ${esc(d.denial_reason)}</span>` : ""}</div></div>
   <div class="docgrid">
     <div><div class="fax"><img src="data/img/${esc(fx)}.png" alt="Synthetic fax page for ${esc(pretty(fx))}"></div>
       <p class="note">Synthetic sample fax. <a href="data/pdf/${esc(fx)}.pdf" target="_blank" rel="noopener">Open the original PDF</a>.</p></div>
@@ -223,12 +223,21 @@ function viewRules() {
 }
 
 /* ---------------------------------------------------------------- router + events */
+/* Presentation only: copies each table header onto its cells so narrow screens can stack rows. */
+function labelCells() {
+  document.querySelectorAll("#view table").forEach((t) => {
+    const heads = [...t.querySelectorAll("thead th")].map((th) => th.textContent.trim());
+    if (!heads.length) return;
+    t.querySelectorAll("tbody tr").forEach((tr) => [...tr.children].forEach((td, i) => td.setAttribute("data-label", heads[i] || "")));
+  });
+}
 function render() {
   const hash = location.hash.replace(/^#\/?/, "") || "incoming";
   const [route, arg] = hash.split("/");
   const views = { incoming: viewIncoming, review: viewReview, board: viewBoard, audit: viewAudit, rules: viewRules, doc: () => viewDoc(arg) };
   nav(route === "doc" ? (S.documents[arg]?.needs_review ? "review" : "board") : route);
   $("#view").innerHTML = (views[route] || viewIncoming)();
+  labelCells();
   window.scrollTo(0, 0);
 }
 
